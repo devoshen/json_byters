@@ -8,14 +8,14 @@
 
 
 ## Group Charter
-Larisa Steigenberger
+###### Larisa Steigenberger
 - Team leader and Project Manager
 - Backend dev (TBD)
-Pavarthy Sudhakaran
+###### Pavarthy Sudhakaran
 - Backend dev (TBD)
-Jaroslaw Czerwinski
+###### Jaroslaw Czerwinski
 - Frontend dev (TBD)
-Stevyn Shen
+###### Stevyn Shen
 - Frontend dev (TBD)
 - Devops: responsible for GitHub repo, file structure and management.
 
@@ -23,13 +23,13 @@ Stevyn Shen
 
 
 ### Frontend Tasks:
-To Do Items
+- To Do Items
 ### Frontend Notes:
 - Problems encoutered and problem solving methodology
 - Future improvements
 
 ### Backend Tasks:
-To Do Items
+- To Do Items
 ### Backend Notes:
 - Problems encoutered and problem solving methodology
 - Future improvements
