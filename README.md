@@ -3,32 +3,36 @@
 - PROJ-207 Website Prototype Presentation 1
 - Project information is linked here https://cprg210.github.io/
 ## Team Name: Json Byters
-Team leader: Larisa Steigenberger
-Team members: Jaroslaw Czerwinski, Parvathy Sudhakaran, Stevyn Shen
+- Team leader: Larisa Steigenberger
+- Team members: Jaroslaw Czerwinski, Parvathy Sudhakaran, Stevyn Shen
 
 
 ## Group Charter
-#### Larisa Steigenberger
+Larisa Steigenberger
 - Team leader and Project Manager
 - Backend dev (TBD)
-#### Parvathy Sudhakaran
+Pavarthy Sudhakaran
 - Backend dev (TBD)
-#### Jaroslaw Czerwinski
+Jaroslaw Czerwinski
 - Frontend dev (TBD)
-#### Stevyn Shen
+Stevyn Shen
 - Frontend dev (TBD)
 - Devops: responsible for GitHub repo, file structure and management.
 
 
-## Backend Tasks:
 
-## Frontend Tasks:
 
-## Backend Notes:
-Include problems encoutered and problem solving methodology
+### Frontend Tasks:
+To Do Items
+### Frontend Notes:
+- Problems encoutered and problem solving methodology
+- Future improvements
 
-## Frontend Notes:
-Include problems encoutered and problem solving methodology
+### Backend Tasks:
+To Do Items
+### Backend Notes:
+- Problems encoutered and problem solving methodology
+- Future improvements
 
 
 ## General Notes:
