@@ -1,0 +1,22 @@
+/* Resets */
+/* https://necolas.github.io/normalize.css */
+
+/* '*' applies to all */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* removes defualt bullet-points in lists */
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+form ul {
+  list-style-type: none;
+  padding-left: 0;
+}
