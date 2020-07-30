@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+</head>
+<body>
+  <form action="action_page.php">
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+     <labelme"><b>Enter your first name</b></label>
+      <input type="text" placeholder="First name" name="firstName" id="firstName" required>
+      <label for="lastName"><b>Enter your last name</b></label>
+      <input type="text" placeholder="Last name" name="lastName" id="lastName" required>
+      <labelme"><b>Your street address</b></label>
+      <input type="text" placeholder="Street name" name="streetName" id="streetName" required>
+      <label for="lastName"><b>City</b></label>
+      <input type="text" placeholder="City" name="city" id="city" required>
+      <labelme"><b>Province</b></label>
+      <input type="text" placeholder="Province" name="Province" id="province" required>
+      <label for="lastName"><b>Country</b></label>
+      <input type="text" placeholder="Country" name="country" id="country" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      <labelme"><b>Your home phone number</b></label>
+      <input type="text" placeholder="home number" name="homeNumber" id="homeNumber" required>
+      <labelme"><b>Your busines phone number</b></label>
+      <input type="text" placeholder="busines number" name="businesNumber" id="businesNumber" required>
+      <labelme"><b>Select your user ID</b></label>
+      <input type="text" placeholder="user id" name="userId" id="userId" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+      <hr>
+      <button type="submit" class="registerbtn">Register</button>
+    </div>
+  
+    <div class="container signin">
+      <p>Already have an account? <a href="#">Sign in</a>.</p>
+    </div>
+  </form>
+  <style>
+     {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: burlywood;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+  </style>
+</body>  
+</body>
+</html>
