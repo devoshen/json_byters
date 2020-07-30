@@ -1,0 +1,43 @@
+/****************/
+/* HERO Section */
+/****************/
+.hero {
+  /* to fix h2 and p in this section to the upper-right of this section */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  background-color: cadetblue;
+  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+    
+  min-height:40vh;
+}
+
+.hero h2 {
+  /* created more space between lines for readability, need to device check on phone */
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				        1px -1px 0 #000,
+               -1px -1px 0 #000;
+               
+  margin: 0;
+  padding: 1em 2em;
+}
+
+.hero p {
+  font-size: 2rem;
+  color: azure;
+  text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				        1px -1px 0 #000,
+               -1px -1px 0 #000;
+
+  margin: 0;
+  padding: 0em 2em;
+}
+

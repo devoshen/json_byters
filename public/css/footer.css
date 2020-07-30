@@ -1,0 +1,14 @@
+/******************/
+/* Footer Section */
+/******************/
+/* consider testing and using flex-box for this section */
+footer {
+  color:rebeccapurple;
+  background-color: Azure;
+  /* margin: 0; */
+}
+
+footer p {
+  text-align: center;
+  /* margin: 0; */
+}
