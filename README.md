@@ -43,6 +43,7 @@
 ## Attributes: 
 - [CPRG-210 - Web Application Development](https://cprg210.github.io/)
 - [FontAwesome](https://fontawesome.com/license/free)
+- [DesignCap](https://www.designcap.com/)
 - [Google Fonts](https://developers.google.com/fonts)
 - [Lorem Picsum](https://picsum.photos)
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn)

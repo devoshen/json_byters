@@ -1,0 +1,72 @@
+/******************/
+/* Header */
+/******************/
+
+/* header mainly contains logo and navbar */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    
+  background-color: azure;
+}
+
+/********/
+/* Logo */
+/********/
+
+.logo {
+  width: 250px;
+  padding: 0.5em 0.5em;
+}
+
+/**********/
+/* Navbar */
+/**********/
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* Hamburger menu */
+.btn-menu {
+  padding: 0;
+  border-width: 0;
+  background-color: azure;
+}
+
+.hamburger-menu {
+  height: 20px;
+}
+
+/* Navbar links */
+
+nav a{
+  color: midnightblue;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding: 10 px;
+}
+
+
+
+
+/* Navbar mouse hover, active, and current page effects */
+nav a:hover {
+  color: blue;
+}
+    
+nav a:active {
+  text-shadow: 2px 2px 8px grey;
+}
+  
+.current-page {
+  background-image: linear-gradient(cornflowerblue, cadetblue);
+}
