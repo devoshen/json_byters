@@ -8,7 +8,7 @@ header{
   justify-content: space-between;
   align-items: center;
     
-  background-color: azure;
+  background-color: aliceblue;
 }
 
 /********/
@@ -45,6 +45,7 @@ nav {
 
 nav a{
   color: midnightblue;
+  padding: 0.5em 1em;
 }
 
 nav ul {
@@ -52,7 +53,8 @@ nav ul {
 }
 
 nav ul li {
-  padding: 10 px;
+  font-weight: 500;
+  
 }
 
 

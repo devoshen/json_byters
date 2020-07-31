@@ -21,7 +21,6 @@
 
 
 
-
 ### Frontend Tasks:
 - To Do Items
 ### Frontend Notes:
@@ -38,7 +37,7 @@
 ## General Notes:
 - Device test: dektop, iphone 
 - Browser test: FireFox, Chrome
-- GitHub repo link: 
+- [GitHub repo](https://github.com/protechshen/json_byters)
 
 ## Attributes: 
 - [CPRG-210 - Web Application Development](https://cprg210.github.io/)

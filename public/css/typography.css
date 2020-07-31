@@ -1,0 +1,30 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/* heading text */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+header h1, 
+header h2, 
+header h3, 
+header h4, 
+header h5, 
+header h6 {
+  font-variant: small-caps;
+}
+
+/* body text */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+
+  /* font size: default is usually 16px */
+  font-size: 18px;
+    
+  /* line-height (called leading in print design); browser default is usually 1.2. Try for a minimum of 1.5, max should be less than 2 */
+  line-height: 1.7;
+}
+
