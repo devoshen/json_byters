@@ -8,6 +8,7 @@
 
 
 ## TESTING GITHUB
+## Test 2
 
 ## Group Charter
 ###### Larisa Steigenberger
