@@ -24,39 +24,73 @@ header{
 /* Navbar */
 /**********/
 
-nav {
-  display: flex;
-  align-items: center;
-  margin: 0;
-}
-
 /* Hamburger menu */
 .btn-menu {
-  padding: 0;
+  padding: 0 1rem;
   border-width: 0;
-  background-color: azure;
+  background-color: aliceblue;
 }
 
 .hamburger-menu {
   height: 20px;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;  
+}
+
 /* Navbar links */
+
+nav ul {
+  display: flex;
+}
 
 nav a{
   color: midnightblue;
   padding: 0.5em 1em;
 }
 
-nav ul {
-  display: flex;
-}
-
 nav ul li {
   font-weight: 500;
-  
 }
 
+/* nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+} */
+
+/* Apply these styles when the screen is in 'landscape' orientation */
+@media (orientation: landscape) {
+   
+  /* Don't show hamburger menu on desktop */
+   nav .btn-menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+}
+
+/* By default, hide menu on mobile (desktop is handled in the media query above) */
+/* nav div ul {
+  display: none;
+} */
+
+/* nav div ul {
+  display: flex;
+} */
+
+.visible {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
 
 
 
@@ -69,6 +103,6 @@ nav a:active {
   text-shadow: 2px 2px 8px grey;
 }
   
-.current-page {
+/* .current-page {
   background-image: linear-gradient(cornflowerblue, cadetblue);
-}
+} */
