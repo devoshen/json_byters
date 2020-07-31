@@ -4,11 +4,30 @@
 /* consider testing and using flex-box for this section */
 footer {
   color:rebeccapurple;
-  background-color: Azure;
-  /* margin: 0; */
+  background-color: aliceblue;
+  margin: 0;
 }
 
 footer p {
   text-align: center;
-  /* margin: 0; */
+  margin: 0;
+}
+
+/* Following is for "sticky" footer */
+.wrapper {
+  /* Flex is used to push the footer to the bottom of the page.*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Required for flex box to push footer to page bottom */
+  min-height: 100vh;
+}
+
+.hero {
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 1;
 }

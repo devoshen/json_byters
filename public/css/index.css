@@ -17,8 +17,8 @@
 }
 
 .hero h2 {
-  /* created more space between lines for readability, need to device check on phone */
   font-size: 2.5rem;
+  font-variant: small-caps;
   color: white;
   text-shadow: -1px 1px 0 #000,
 				        1px 1px 0 #000,
@@ -41,3 +41,30 @@
   padding: 0em 2em;
 }
 
+/****************************/
+/* Main - Vacation Packages */
+/****************************/
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+main h2 {
+  margin-left: 1em;
+}
+
+.vacationPackages {
+  display: flex;
+}
+
+.vacationPackages img {
+
+  width: 90%;
+  margin: 1em;
+  border-radius: 15px;
+}
+
+.vacationPackages a {
+  text-decoration: none;
+}
