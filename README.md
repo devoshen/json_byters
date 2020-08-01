@@ -7,6 +7,9 @@
 - Team members: Jaroslaw Czerwinski, Parvathy Sudhakaran, Stevyn Shen
 
 
+## TESTING GITHUB
+## Test 2
+
 ## Group Charter
 ###### Larisa Steigenberger
 - Team leader and Project Manager
