@@ -8,7 +8,7 @@
   justify-content: flex-start;
   align-items: flex-end;
 
-  background-color: cadetblue;
+  background-color: aliceblue;
   background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
   background-size: cover;
   background-position: center;
@@ -46,7 +46,7 @@
 /****************************/
 
 main {
-  max-width: 1400px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
