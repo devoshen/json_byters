@@ -26,24 +26,33 @@ header{
 
 /* Hamburger menu */
 .btn-menu {
-  padding: 0 1rem;
+  padding: 0 2rem;
   border-width: 0;
   background-color: aliceblue;
 }
 
-.hamburger-menu {
+.img-menu {
   height: 20px;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;  
 }
 
 /* Navbar links */
 
-nav ul {
+/* Screen is in 'landscape' orientation (mobile view), hide Navbar links */
+/* (desktop view is handled in the media query below) */
+nav div ul {
+  display: none;
+}
+
+nav {
   display: flex;
+  flex-direction: column;
+}
+
+.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 nav a{
@@ -55,54 +64,36 @@ nav ul li {
   font-weight: 500;
 }
 
-/* nav {
-  display: flex;
-  align-items: center;
-  margin: 0;
-} */
-
-/* Apply these styles when the screen is in 'landscape' orientation */
-@media (orientation: landscape) {
-   
-  /* Don't show hamburger menu on desktop */
-   nav .btn-menu {
-    display: none;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-
-}
-
-/* By default, hide menu on mobile (desktop is handled in the media query above) */
-/* nav div ul {
-  display: none;
-} */
-
-/* nav div ul {
-  display: flex;
-} */
-
-.visible {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-
-
-/* Navbar mouse hover, active, and current page effects */
+/* hover, active, and current page effects */
 nav a:hover {
   color: blue;
 }
     
 nav a:active {
-  text-shadow: 2px 2px 8px grey;
+  text-shadow: 2px 2px 8px cadetblue;
 }
   
 /* .current-page {
   background-image: linear-gradient(cornflowerblue, cadetblue);
 } */
+
+
+/* Screen is in 'landscape' orientation (desktop view) */
+@media (orientation: landscape) {
+   
+  /* Don't show hamburger menu on desktop view */
+   nav .btn-menu {
+    display: none;
+  }
+
+  nav div ul {
+    display: flex;
+    /* align-items: center; */
+    /* margin: 0; */
+  }
+}
+
+
+
+
+

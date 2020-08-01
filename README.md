@@ -1,3 +1,5 @@
+# Branch-SS
+
 # Travel Experts Website by Json Byters
 - TechCareers Cohort-4 Summer 2020
 - PROJ-207 Website Prototype Presentation 1
@@ -6,10 +8,6 @@
 - Team leader: Larisa Steigenberger
 - Team members: Jaroslaw Czerwinski, Parvathy Sudhakaran, Stevyn Shen
 
-
-## TESTING GITHUB
-## Test 2
-
 ## Group Charter
 ###### Larisa Steigenberger
 - Team leader and Project Manager
@@ -17,10 +15,10 @@
 ###### Pavarthy Sudhakaran
 - Backend dev (TBD)
 ###### Jaroslaw Czerwinski
-- Frontend dev (TBD)
+- Frontend dev: login, register, contact, html form validation
 ###### Stevyn Shen
-- Frontend dev (TBD)
-- Devops: responsible for GitHub repo, file structure and management.
+- Frontend dev: index, packages, navbar, hamburger menu
+- Devops: version control with GitHub
 
 
 
@@ -49,10 +47,11 @@
 - [Google Fonts](https://developers.google.com/fonts)
 - [Lorem Picsum](https://picsum.photos)
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn)
+- [Inspiration from "expedia.ca"](https://www.expedia.ca/)
 
 ## Contributors: 
 - Tony Grimes, Instructor
-- TechCareers nerd, class of Summer 2020
+- Nerds from TechCareers, Class of Summer 2020
 
 
 
