@@ -1,0 +1,25 @@
+{
+  "name": "json_byters",
+  "version": "1.0.0",
+  "description": "- TechCareers Cohort-4 Summer 2020\r - PROJ-207 Website Prototype Presentation 1\r - Project information is linked here https://cprg210.github.io/\r ## Team Name: Json Byters\r - Team leader: Larisa Steigenberger\r - Team members: Jaroslaw Czerwinski, Parvathy Sudhakaran, Stevyn Shen",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protechshen/json_byters.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/protechshen/json_byters/issues"
+  },
+  "homepage": "https://github.com/protechshen/json_byters#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27"
+  }
+}
