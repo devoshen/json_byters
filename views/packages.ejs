@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Travel Experts Vacation Packages</title>
+  <title>Travel Experts Vacation Packages</title>
+  
+  <link rel="stylesheet" href="../css/packages.css">
   <%- include('./partials/css-global'); %>
 </head>
 <body>
@@ -11,13 +13,22 @@
 		<%- include('./partials/header'); %>
 		
 		<main>
-
+      <figure>
+        <h2><%= PkgName %></h2>
+        <img src="<%= path %>">
+        <p> <%= PkgDesc %> </p>
+        <p class="start-date"><%= PkgStartDate %></p>
+        <p class="end-date"><%= PkgEndDate %></p>
+        <p>$ <%= PkgBasePrice %></p>
+      </figure>
 		</main>
 
 		<%- include('./partials/footer'); %>
 	</div>
 	
 	<%- include('./partials/js-packages'); %>
-	<%- include('./partials/js-menu-toggle'); %>
+  <%- include('./partials/js-menu-toggle'); %>
+  
+  <script src="/js/singlepackage.js"></script>
 </body>
 </html>
