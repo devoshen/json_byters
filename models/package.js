@@ -10,7 +10,8 @@ const packageSchema = new mongoose.Schema(
     PkgEndDate:          Date,
     PkgDesc:             String,
     PkgBasePrice:        Number,      
-    PkgAgencyCommission: Number
+    PkgAgencyCommission: Number,
+    path:                String,
   }
 );
 
