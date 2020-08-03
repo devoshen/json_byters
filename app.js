@@ -59,11 +59,6 @@ app.get('/test-packages', function (request, response) {
 // to be deleted
 app.get('/test-index', function (request, response) {
   Package.find(function (error, packages) {
-    // let selectedpackage = [];
-    // packages.forEach(function (item) {
-    //   if (item.PkgEndDate <= now_date) {
-    //     let selectedpackage += item;
-    //   } 
       response.render('test-index', packages);
   });
 })

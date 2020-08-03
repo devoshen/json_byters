@@ -21,11 +21,12 @@ let currentdate = new Date();
 // console.log(formatted_currentdate);
 
 if (db_startdate < currentdate) {
-  
-  console.log("if")
   startdate.classList.add('date');
   startdate.innerHTML = formatted_pack_strtdate;
-
-};
+  enddate.innerHTML = formatted_pack_enddate;
+} else {
+  startdate.innerHTML = formatted_pack_strtdate;
+  enddate.innerHTML = formatted_pack_enddate;
+}
 
 
