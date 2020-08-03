@@ -51,10 +51,29 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Endpoint handlers to render and serve each page template
 
-// trail web page - to be deleted
-app.get('/test-packages', function (request, response) {
-  response.render('test-backend-packages');
+app.get('/', function (request, response) {
+  Package.find(function (error, packages) {
+    response.render('index', packages);
+});
 })
+
+app.get('/login', function (request, response) {
+  response.render('login');
+})
+
+app.get('/register', function (request, response) {
+  response.render('register');
+})
+
+app.get('/contact', function (request, response) {
+  response.render('contact');
+})
+
+
+// trail web page - to be deleted
+// app.get('/packages', function (request, response) {
+//   response.render('packages');
+// })
 
 // to be deleted
 app.get('/test-index', function (request, response) {
@@ -63,13 +82,7 @@ app.get('/test-index', function (request, response) {
   });
 })
 
-// app.get('/login', function (request, response) {
-//   response.render('login', { 'title': 'Login' });
-// })
 
-// app.get('/register', function (request, response) {
-//   response.render('register', { 'title': 'Sign Up' });
-// })
 
 // Display an individual package page when someone browses to an ID
 
@@ -82,7 +95,7 @@ app.get('/travelpackages/:id', function (request, response) {
       response.status(404);
       response.send('404: File Not Found');
     }
-    response.render('test-backend-packages', package);
+    response.render('packages', package);
   });
 })
 

@@ -12,7 +12,7 @@ fetch('http://localhost:3000/test-index/api/packages')
     // console.log(data);
     const imgList = data;
     let imgtemplate = '';
-    let image = document.querySelector('.img-container');
+    let image = document.querySelector('.vacationPackages');
 
     let currentdate = new Date();
 
@@ -26,12 +26,10 @@ fetch('http://localhost:3000/test-index/api/packages')
       console.log(formatted_pack_enddate);
 
 
-      if (db_enddate <= currentdate) {
-        console.log("if");
+      if (db_enddate >= currentdate) {
         imgtemplate +=
           `<figure>
-        <a href="travelpackages/${item.PackageId}"><p>${item.PackageId}</p></a>
-        <img src="${item.path}">
+        <a href="travelpackages/${item.PackageId}"> <img src="${item.path}"></a>
         <figcaption>${item.PkgDesc}</figcaption>
         </figure>`;
       };
