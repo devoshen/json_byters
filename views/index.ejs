@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Travel Experts Home</title>
+	<%- include('./partials/css-global'); %>
+</head>
+<body>
+	<div class="wrapper">
+		<%- include('./partials/header'); %>
+
+		<!-- HERO Section  -->
+		<div class="hero">
+			<h2>Traval Tips from the Travel Experts</h2>
+			<p>Sign Up Now for Exlusive Deals!</p>
+		</div>
+		
+		<!-- Vacation Packages -->
+		<main>
+			<h2>Find your next destination in our Vacation Packages</h2>
+			<div class="vacationPackages">
+			<!-- The gallery will go here. See pakages.js to see how this happens -->
+			</div>
+		</main>
+
+		<%- include('./partials/footer'); %>
+	</div>
+	
+	<%- include('./partials/js-packages'); %>
+	<%- include('./partials/js-menu-toggle'); %>
+</body>
+</html>
