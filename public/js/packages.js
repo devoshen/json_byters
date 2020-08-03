@@ -45,7 +45,7 @@ const vacationPackages =
     },
     {
         pkgID:          3,
-        pkgName:        "Europea Vacation",
+        pkgName:        "European Vacation",
         pkgStartDate:   "2005-11-01",
         pkgEndDate:     "2005-11-14",
         pkgDescription: 'Lorem Ipsum Description',
