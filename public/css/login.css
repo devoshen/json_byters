@@ -1,0 +1,55 @@
+
+*{
+box-sizing: border-box;
+}
+body{
+  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+.wrapper{
+  width: 800px;
+  margin: 1% auto;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
+}
+.form-area{
+  display: flex;
+  background:rgb(104, 201, 247);
+  border-radius: 25px;
+  padding: 1.9em;
+}
+.details-area{
+  flex: 1;
+  order: 1;
+  margin-right: 2em;
+}
+.details-area input{
+  width: 100%;
+  background: transparent;
+  color:black;
+  border-radius: 40px;
+  font-size: 20px;
+}
+.details-area button{
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.details-area button{
+  background: yellowgreen;
+  color:red;
+  border: 0;
+  padding: 15px 50px;
+  border-radius: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+label{
+  color:#fff;
+  text-transform: uppercase;
+  line-height: 40px;
+  font-family: Audiowide;
+}
+
