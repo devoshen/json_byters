@@ -3,89 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ContactUs</title>
+  <title>Registration</title>
+  <link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/typography.css">
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/footer.css">
 </head>
+  	<!-- Header & Navbar-->
+		<header>
+			<div class="logo"> 
+				<a href="index.html"><img class="logo" src="../images/logo-no-bg.jpg" alt="Travel Experts Logo"></a>
+			</div>
+			<nav>
+				<button class="btn-menu">
+					<img class="hamburger-menu" src="../images/menu.svg" alt="hamburger menu">	
+				</button>
+				<div class="navbar">
+					<ul>
+						<li><a href="packages.html">Trips</a></li>
+						<li><a href="contact.html">Support</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="registration.html">Register</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
 <body>
-  <div class="container">
-    <form action="action_page.php">
-
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-      <input type="submit" value="Submit"><br>
-
-
-  <p1>Travel Experts <br><br>
+  <div class="wrapper">
+  
+    <form action="" class="form-area">
+      <div class="msg-area">
+      <label for="msg">Message</label> 
+      <textarea id="msg"></textarea> 
+      </div>
+      <div class="details-area">
+        <lable for="name">First Name</lable>
+        <input type="text" name="" id="name">
+        <lable for="name">Last Name</lable>
+        <input type="text" name="" id="name"><br><br><br>
+     
+ 
+  <p1>Travel Experts <br>
     1301 16 Ave NW &nbsp; &nbsp; Tel. 403.284.7248<br>
     Calgary, Alberta, Canada &nbsp; &nbsp; Toll-free: 1.877.284.7248<br>
     T2M 0L4 &nbsp; &nbsp;&nbsp;&nbsp; Fax: 403.284.7112<br><br>
-    Agency manager: Larisa S<br>
+    Agency manager: Larisa ext.1400<br>
     Travel Agent: Parvathy ext.1401<br>
     Travel Agent: Stevyn ext.1402<br>
     Travel Agent: Jaroslaw ext.1403
-  </p1>
-  </form>
+  </p1><br><br>
+  <button type="submit">Submit</button>
+
   </div>
-  <style>
-    {box-sizing: border-box}
+</form>
 
-/* Add padding to containers */
-.container {
- padding: 16px;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
- width: 100%;
- padding: 15px;
- margin: 5px 0 22px 0;
- display: inline-block;
- border: none;
- background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
- background-color: #ddd;
- outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
- border: 1px solid #f1f1f1;
- margin-bottom: 25px;
-}
-
-/* Set a style for the submit/register button */
-.registerbtn {
- background-color: burlywood;
- color: white;
- padding: 16px 20px;
- margin: 8px 0;
- border: none;
- cursor: pointer;
- width: 100%;
- opacity: 0.9;
-}
-
-.registerbtn:hover {
- opacity:1;
-}
-
-/* Add a blue text color to links */
-a {
- color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
- background-color: #f1f1f1;
- text-align: center;
-}
-
- </style>
+      </div>
+    </form>
+  </div>
 </body>
+	<!-- Footer -->
+  <footer>
+    <p>&copy; 2020 Json Byters Ltd. All rights reserved.</p>
+  </footer>
 </html>
+
+<style>
+*{
+box-sizing: border-box;
+}
+body{
+  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+.wrapper{
+  width: 700px;
+  margin: 1% auto;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
+}
+.form-area{
+  display: flex;
+  background:rgb(104, 201, 247);
+  border-radius: 25px;
+  padding: 1em;
+  
+}
+.msg-area{
+  display: flex;
+  flex-direction:column;
+  order: 2;
+} 
+.msg-area > textarea{
+  flex: 1;
+  min-width: 18em;
+  background: transparent;
+  color:black;
+  padding: 15px;
+  font-size: 20px;
+} 
+.details-area{
+  flex: 1;
+  order: 1;
+  margin-right: 2em;
+}
+.details-area input{
+  width: 100%;
+  background: transparent;
+  color:black;
+  border-radius: 40px;
+  font-size: 20px;
+}
+.details-area button{
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.details-area button{
+  background: yellowgreen;
+  color:red;
+  border: 0;
+  padding: 15px 50px;
+  border-radius: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+label{
+  color:red;
+  text-transform: uppercase;
+  line-height: 40px;
+  font-family: Audiowide;
+}
+
+
+</style>
