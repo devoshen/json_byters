@@ -14,8 +14,6 @@ body{
   opacity: 0.8;
   align-items: center;
   justify-content: center;
- 
-
 }
 .form-area{
   display: flex;
@@ -26,7 +24,7 @@ body{
 .details-area{
   flex: 1;
   order: 1;
-  margin-right: 2em;
+  margin-right: 1em;
 }
 .details-area input{
   width: 100%;
