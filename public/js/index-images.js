@@ -30,6 +30,7 @@ fetch('http://localhost:3000/api/packages')
         <a href="travelpackages/${item.PackageId}"> <img src="${item.path}"></a>
         <figcaption>${item.PkgName}</figcaption>
         </figure>`;
+
       };
     });
     image.innerHTML = imgtemplate;

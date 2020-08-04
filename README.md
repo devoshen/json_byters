@@ -1,5 +1,3 @@
-# branch-ss2 -m "updated hamburger menu"
-
 # Travel Experts Website by Json Byters
 - TechCareers Cohort-4 Summer 2020
 - PROJ-207 Website Prototype Presentation 1
@@ -21,7 +19,6 @@
 - Devops: version control with GitHub
 
 
-
 ### Frontend Tasks:
 - To Do Items
 ### Frontend Notes:
@@ -33,7 +30,6 @@
 ### Backend Notes:
 - Problems encoutered and problem solving methodology
 - Future improvements
-
 
 ## General Notes:
 - Device test: dektop, iphone 
