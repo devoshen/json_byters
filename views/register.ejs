@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <%- include('./partials/css-global'); %>
+  <link rel="stylesheet" href="../css/registration.css">
+  
+</head>
+  	<!-- Header & Navbar-->
+		<%- include('./partials/header'); %>
+<body>
+  <div class="wrapper">
+  
+    <form action="/register" class="form-area" method ="POST">
+      <div class="msg-area">
+        <!-- <label for="msg">Message</label> -->
+        <!-- <textarea id="msg"></textarea> -->
+      </div>
+      <div class="details-area">
+        <lable for="firstname">First Name</lable>
+        <input type ="text" placeholder = "firstName" name = "firstName" id="firstname">
+        <lable for="lastname">Last Name</lable>
+        <input type ="text" placeholder = "last name" name = "lastName" id="lastname">
+        <lable for="address">Address</lable>
+        <input type ="text" placeholder = "address" name = "address">
+        <lable for="city">City</lable>
+        <input type ="text" placeholder = "city" name = "city" id="city">
+        <lable for="prov">Province</lable>
+        <input type ="text" placeholder = "prov" name = "prov" id ="prov">
+        <lable for="postal">Postal Code</lable>
+        <input type ="text" placeholder = "postal" name = "postal" id="postal">
+        <lable for="country">Country</lable>
+        <input type ="text" placeholder = "country" name = "country" id ="country">
+        <lable for="homePhone">Home Phone Number</lable>
+        <input type ="text" placeholder = "homePhone" name = "homePhone" id="homePhone">
+        <lable for="busPhone">Busines Phone Number</lable>
+        <input type ="text" placeholder = "busPhone" name = "busPhone" id="busPhone">
+        <lable for="username">Username</lable>
+        <input type ="text" placeholder = "username" name = "username" id="username">
+        <lable for="email">Email Address</lable>
+        <input type="email" placeholder = "email" name="email" id="email" required >
+        <lable for="password">Password</lable>
+        <input type="password" name="password" id="password" placeholder="Enter password" >
+        <!-- <lable for="name">Re-enter Password</lable>
+        <input type="text" name="" id="name"><br><br> -->
+        <!-- pattern=".+@company\.com" -->
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+</div>
+   
+  <%- include('./partials/footer'); %>
+
+
+  <%- include('./partials/js-menu-toggle'); %>
+</body> 
+</html>
+
+

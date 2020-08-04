@@ -5,10 +5,23 @@ const express = require('express');
 // const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
+const bodyParser =require ('body-parser')
+
+const passport= require('passport');
+const LocalStrategy = require('passport-local');
+const passportLocalMongoose = require ('passport-local-mongoose');
+
+const User = require("./models/customer.js");
 const Package = require('./models/package.js');
 const Agency = require('./models/agency.js');
 const Agent = require('./models/agent.js');
 const { forEach } = require('async');
+
+//  Set up ROUTES for authentifications, and bookings
+const authRoutes     = require("./routes/auth")
+const addorderRoutes    = require("./routes/addorder")
+
+
 
 const now_date = new Date();
 
@@ -38,19 +51,19 @@ app.set('view engine', 'ejs');
 // if yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
-// cors origin URL - Allow inbound traffic from origin
-// corsOptions = {
-//   origin: "https://dashboard.heroku.com",
-//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// };
-// app.use(cors(corsOptions));
+app.use(bodyParser.urlencoded ({extended:true}));
 
+// Always need when working with passwords
+app.use(passport.initialize());
+app.use(passport.session())
+// reading, encoding and uncoding the the login information
+passport.use(new LocalStrategy(User.authenticate()))
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
-// sets the current year in footer section using moment module 
-// app.use('/', function (req, res, next) {
-//   res.locals.currentYear = moment().format('YYYY');
-//   next();
-// });
+app.use(authRoutes)
+app.use(addorderRoutes)
+
 
 // Endpoint handlers to render and serve each page template
 
@@ -66,6 +79,10 @@ app.get('/login', function (request, response) {
 
 app.get('/register', function (request, response) {
   response.render('registration');
+})
+
+app.get('/order', function (request, response) {
+  response.render('order');
 })
 
 app.get('/contact', function (request, response) {
