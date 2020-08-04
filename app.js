@@ -65,7 +65,7 @@ app.get('/login', function (request, response) {
 })
 
 app.get('/register', function (request, response) {
-  response.render('register');
+  response.render('registration');
 })
 
 app.get('/contact', function (request, response) {
