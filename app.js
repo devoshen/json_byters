@@ -6,6 +6,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const Package = require('./models/package.js');
+const Agency = require('./models/agency.js');
+const Agent = require('./models/agent.js');
+const { forEach } = require('async');
 
 const now_date = new Date();
 
@@ -54,7 +57,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function (request, response) {
   Package.find(function (error, packages) {
     response.render('index', packages);
-});
+  });
 })
 
 app.get('/login', function (request, response) {
@@ -66,9 +69,13 @@ app.get('/register', function (request, response) {
 })
 
 app.get('/contact', function (request, response) {
-  response.render('contact');
+  Agency.find(function (error, agencies) {
+    Agent.find(function (error, agent) {
+      data = { agencies_data: agencies, agent_data: agent }
+      response.render('contact', { contact_data: data });
+    })
+  });
 })
-
 
 // trail web page - to be deleted
 // app.get('/packages', function (request, response) {
@@ -76,11 +83,11 @@ app.get('/contact', function (request, response) {
 // })
 
 // to be deleted
-app.get('/test-index', function (request, response) {
-  Package.find(function (error, packages) {
-      response.render('test-index', packages);
-  });
-})
+// app.get('/test-index', function (request, response) {
+//   Package.find(function (error, packages) {
+//       response.render('test-index', packages);
+//   });
+// })
 
 
 
@@ -100,7 +107,8 @@ app.get('/travelpackages/:id', function (request, response) {
 })
 
 // JSON api endpoint
-app.get('/test-index/api/packages', function (request, response) {
+
+app.get('/api/packages', function (request, response) {
   Package.find(function (error, packages) {
     response.json(packages);
   });

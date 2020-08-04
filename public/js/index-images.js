@@ -4,7 +4,7 @@
 // fetch('http://localhost:3000/api/destinations') 
 // fetch('https://travel-experts-heroku.herokuapp.com/api/destinations')
 
-fetch('http://localhost:3000/test-index/api/packages')
+fetch('http://localhost:3000/api/packages')
   .then(function (response) {
     return response.json();
   })
@@ -15,8 +15,6 @@ fetch('http://localhost:3000/test-index/api/packages')
     let image = document.querySelector('.vacationPackages');
 
     let currentdate = new Date();
-
-
 
     imgList.forEach(function (item) {
       console.log(item);
