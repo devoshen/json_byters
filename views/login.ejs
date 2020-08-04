@@ -12,26 +12,27 @@
 <body>
   <div class="wrapper">
   
-    <form action="" class="form-area">
+    <form action="/login" class="form-area" method ="POST">
       <div class="msg-area">
         <!-- <label for="msg">Message</label> -->
         <!-- <textarea id="msg"></textarea> -->
       </div>
       <div class="details-area">
         
-        <lable for="name">Email Address</lable>
-        <input type="text" name="" id="name">
-        <lable for="name">Password</lable>
-        <input type="text" name="" id="name">
+        <lable for="username">Username</lable>
+        <input type="text" name="username" id="username"  placeholder="username" required minlength="6">
+        <lable for="password">Password</lable>
+        <input type="password" name="password" id="password" placeholder="Enter password" >
         
-  <button type="submit">Submit</button>
-  </div>
-</form>
-
+        <button type="submit">Submit</button>
       </div>
+      
     </form>
-    <%- include('./partials/footer'); %>
+    <p>Dont have login information? <a href="/register">Sign up here</a></p>
   </div>
+  <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+    <%- include('./partials/footer'); %>
+
   <%- include('./partials/js-menu-toggle'); %>
 </body>
 </html>
