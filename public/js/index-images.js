@@ -27,9 +27,9 @@ fetch('http://localhost:3000/api/packages')
       if (db_enddate >= currentdate) {
         imgtemplate +=
           `<figure>
-        <a href="travelpackages/${item.PackageId}"> <img src="${item.path}"></a>
-        <figcaption>${item.PkgDesc}</figcaption>
-        </figure>`;
+            <a href="travelpackages/${item.PackageId}"> <img src="${item.path}"></a>
+            <figcaption>${item.PkgName}</figcaption>
+          </figure>`;
       };
     });
     image.innerHTML = imgtemplate;

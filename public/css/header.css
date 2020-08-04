@@ -5,7 +5,7 @@
 /* header mainly contains logo and navbar */
 header{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
     
   background-color: aliceblue;
@@ -61,7 +61,7 @@ nav a{
 }
 
 nav ul li {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* hover, active, and current page effects */
