@@ -1,4 +1,4 @@
-/{
+{
   box-sizing: border-box;
   }
   body{
@@ -12,18 +12,31 @@
     margin: 1% auto;
     opacity: 0.8;
     align-items: center;
-    justify-content: center;
-  
+    justify-content: center; 
   }
   .form-area{
     display: flex;
     background:rgb(104, 201, 247);
     border-radius: 25px;
     padding: 1.9em;
+   flex-direction: row-reverse; 
   }
+  .msg-area{
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .msg-area > textarea{
+    flex: 1;
+    min-width: 18em;
+    background: transparent;
+    color: black;
+    padding: 15px;
+  }
+
   .details-area{
     flex: 1;
-    order: 1;
+    order: 2;
     margin-right: 2em;
   }
   .details-area input{
@@ -47,7 +60,7 @@
     text-transform: uppercase;
   }
   label{
-    color:#fff;
+    color:red;
     text-transform: uppercase;
     line-height: 40px;
     font-family: Audiowide;
