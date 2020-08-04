@@ -25,18 +25,26 @@
         <lable for="name">Last Name</lable>
         <input type="text" name="" id="name"><br><br><br>
 
+        <!-- <%= contact_data.agencies_data %> -->
+        <p1>Travel Experts</p1>
+          <p><% contact_data.agencies_data.forEach(function(agency){ %>
+              <br>
+              <%= agency.AgncyAddress %> &nbsp; &nbsp; Tel.<%= agency.AgncyPhone %><br>
+              <%= agency.AgncyCity %>, <%= agency.AgncyProv %>, <%= agency.AgncyCountry %><br>
+              <%= agency.AgncyPostal %> &nbsp; &nbsp;&nbsp;&nbsp; Fax: <%= agency.AgncyFax %><br><br>
 
-        <p1><%= contact_data.agencies_data %><br>
-          1301 16 Ave NW &nbsp; &nbsp; Tel. 403.284.7248<br>
-          Calgary, Alberta, Canada &nbsp; &nbsp; Toll-free: 1.877.284.7248<br>
-          T2M 0L4 &nbsp; &nbsp;&nbsp;&nbsp; Fax: 403.284.7112<br><br>
-          Agency manager: Larisa ext.1400<br>
-          Travel Agent: Parvathy ext.1401<br>
-          Travel Agent: Stevyn ext.1402<br>
-          Travel Agent: Jaroslaw ext.1403
-        </p1><br><br>
-      
-        <button type="submit">Submit</button>
+              <% contact_data.agent_data.forEach(function(agent) { %>
+                 
+                  <% if (agent.AgencyId == agency.AgencyId) { %>
+                    <%= agent.AgtPosition %>: <%= agent.AgtFirstName %> &nbsp; <%= agent.AgtLastName %> &nbsp; Tel.<%= agent.AgtBusPhone %><br>
+                    <%} 
+                    %>  
+                <%});
+              %>
+            <%});
+          %></p>
+
+          <button type="submit">Submit</button>
 
       </div>
     </form>
