@@ -41,20 +41,20 @@
   padding: 0.5rem 4rem 0.5rem 0.5rem;
 }
 
-.hero button {
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 700;
+.hero-btn {
+  padding: 5px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 900;
   text-align: center;
   color: white;
   background-color: royalblue;
   border: none;
   margin-top: 0.5rem;
-  margin-right: 4rem;
 }
 
-.hero button:hover {
+.hero-btn:hover {
   background-color: dodgerblue;
 } 
 
@@ -74,15 +74,19 @@ main h2 {
 .vacationPackages {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 .vacationPackages figure {
   /* background-color: lightskyblue; */
   margin: 0;
+  width: 300px;
+  /* height: 400px; */
 }
 
 .vacationPackages img {
-  width: 280px;
+  width: 95%;
+  height: 85%;
   margin: 0 10px;
   border-radius: 15px;
 }

@@ -7,11 +7,7 @@
   
   <link rel="stylesheet" href="../css/packages.css">
   <%- include('./partials/css-global'); %>
-  <style>
-    img {
-      width: 400px;
-    }
-  </style>
+
 </head>
 <body>
 	<div class="wrapper">
@@ -22,37 +18,40 @@
         <h2><%= PkgName %></h2>
         <img src="<%= path %>">
         <p> <%= PkgDesc %> </p>
-        <p class="start-date"><%= PkgStartDate %></p>
-        <p class="end-date"><%= PkgEndDate %></p>
-        <p>$ <%= PkgBasePrice %></p>
+        <div>
+          <p>Start Date:</p>
+          <p class="start-date"><%= PkgStartDate %></p>
+        </div>
+        <div>
+          <p>End Date:</p>
+          <p class="end-date"><%= PkgEndDate %></p>
+        </div>
+        <div>
+          <p>Package Price:</p>
+          <p>$<%= PkgBasePrice %></p>
+        </div>
+        <a href="/order">BOOK NOW</a>
       </figure>
 
+      <!-- <form  action="/order" method="post">
+        <input type="text" placeholder ="bookingId" name ="bookingId">
+        <input type ="text" placeholder = "start date" value= "<%= PkgStartDate %>">
+        <input type ="text" placeholder = "bookingNo" name = "bookingNo">
+        <input type ="text" placeholder = "travelCount" name = "travelCount">
+        <input type ="text" placeholder = "customerId" name = "customerId">
+        <input type ="text" placeholder = "tripTypeId" name = "tripTypeId">
+        <input type ="text" placeholder = "packageId" name = "packageId">
+      
+        <input type ="text" placeholder = "image url" name = "image">
+        <button>Submit!</button>
+              
+      </form> -->
 
-    <!-- <form  action="/order" method="post">
-      <input type="text" placeholder ="bookingId" name ="bookingId">
-      <input type ="text" placeholder = "start date" value= "<%= PkgStartDate %>">
-      <input type ="text" placeholder = "bookingNo" name = "bookingNo">
-      <input type ="text" placeholder = "travelCount" name = "travelCount">
-      <input type ="text" placeholder = "customerId" name = "customerId">
-      <input type ="text" placeholder = "tripTypeId" name = "tripTypeId">
-      <input type ="text" placeholder = "packageId" name = "packageId">
-    
-      <input type ="text" placeholder = "image url" name = "image">
-      <button>Submit!</button>
-            
-    </form> -->
-
-    <a href="/order">BOOK IT NOW</a>
-  </main>
+    </main>
+    <%- include('./partials/footer'); %>
 	</div>
-  
- <a href="/order">BOOK IT NOW</a>
-
  
-		<%- include('./partials/footer'); %>
-	<%- include('./partials/js-packages'); %>
   <%- include('./partials/js-menu-toggle'); %>
-  
   <script src="/js/singlepackage.js"></script>
 </body>
 </html>
