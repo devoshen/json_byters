@@ -9,6 +9,7 @@
 </head>
 <body>
   <div class="wrapper">
+  <div class="label">
     <%- include('./partials/header'); %>
     <main>
       <div>
@@ -17,18 +18,19 @@
     <legend>Please login</legend>
       <ul>
        <li> 
-        <lable>User name</lable>
-        <input type="text" placeholder="username" name="username" required minlength="6">
+        <label>User name</label>
+        <input type="text" placeholder="user name" name="username" required minlength="6">
       </li> 
       <li>
-        <lable>Password</lable>
-        <input type="password" name="password" id="password" placeholder="Enter password" ><br><br>
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="enter password" ><br><br>
       </li>
-        <button type="submit">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit">Submit</button>
         <a id="Register Here" href="register">Click here to register
         </ul>
     </fieldset>
     </form>
+  </div>
   </div>
 </main>
   <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
