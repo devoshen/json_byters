@@ -146,7 +146,7 @@ function isLoggedIn(req,res,next){
 // if no file or endpoint found, send a 404 error as a response to the browser
 app.use(function (req, res, next) {
   res.status(404);
-  // res.render('404', { 'title': "404" });
+  res.render('404', { 'title': "404" });
 });
 
 // start up server
