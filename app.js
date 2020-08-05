@@ -6,7 +6,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const bodyParser =require ('body-parser')
-
+const connectFlash = require('connect-flash');
 const passport= require('passport');
 const LocalStrategy = require('passport-local');
 const passportLocalMongoose = require ('passport-local-mongoose');
@@ -57,6 +57,9 @@ app.use(require('express-session')({
   saveUninitialized:false
 }));
 
+// express - message middleware
+app.use(connectFlash());
+
 // Always need when working with passwords
 app.use(passport.initialize());
 app.use(passport.session())
@@ -67,6 +70,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req,res,next){
   res.locals.currentUser = req.user;
+  res.locals.error = req.flash('error')
   next()
 })
 
