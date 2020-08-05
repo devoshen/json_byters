@@ -8,12 +8,18 @@
   <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
+  
   <div class="wrapper">
-  <div class="label">
+    <div class="label">
     <%- include('./partials/header'); %>
     <main>
       <div>
     <form action="/login" method ="post">
+      <% if (!error) { %>
+        <p> </p>
+     <%} else { %> 
+          <p class="welcome"> <%= error %> </p> 
+     <%} %>
      <fieldset>
     <legend>Please login</legend>
       <ul>
