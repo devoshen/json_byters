@@ -13,51 +13,47 @@
 	<div class="wrapper">
 		<%- include('./partials/header'); %>
 		<main>
-      <div> 
-        <h1>Bookings</h1>
-        <form  action="/order" method="post">
-          <fieldset>
-            <legend>Book Your Travel Package</legend>
-            <ul>
-              <li>
-                <label>Booking ID</label>
-                <input type="text" placeholder ="bookingId" name ="bookingId">
-              </li>
-              <li>
-                <label>Booking Date</label>
-                <input type ="text" placeholder = "bookingDate" name = "bookingDate">
-              </li>
-              <li>
-                <label>Booking No</label>  
-                <input type ="text" placeholder = "bookingNo" name = "bookingNo">
-              </li>
-              <li>
-                <label>Travel Count</label>
-                <input type ="text" placeholder = "travelCount" name = "travelCount">
-              </li>      
-              <li>
-                <label>Customer ID</label>
-                <input type ="text" placeholder = "customerId" name = "customerId">
-              </li>
-              <li>
-                <label>Trip Type ID</label>
-                <input type ="text" placeholder = "tripTypeId" name = "tripTypeId">
-              </li>
-              <li>
-                <label>Package ID</label>
-                <input type ="text" placeholder = "packageId" name = "packageId">
-              </li>
-              <li>
-                <label>UsernameL</label>
-                <input type ="text" placeholder = "username" name = "username">
-              </li>
-              <button>Submit!</button>
-            </ul>
-          </fieldset> 
-        </form>
-      </div>
-
-
+      <h1>Bookings</h1>
+      <form  action="/order" method="post">
+        <fieldset>
+          <legend>Book Your Travel Package</legend>
+          <ul>
+            <li>
+              <label>Booking ID:</label>
+              <input type="text" placeholder ="bookingId" name ="bookingId">
+            </li>
+            <li>
+              <label>Booking Date:</label>
+              <input type ="text" placeholder = "bookingDate" name = "bookingDate">
+            </li>
+            <li>
+              <label>Booking No:</label>  
+              <input type ="text" placeholder = "bookingNo" name = "bookingNo">
+            </li>
+            <li>
+              <label>Travel Count:</label>
+              <input type ="text" placeholder = "travelCount" name = "travelCount">
+            </li>      
+            <li>
+              <label>Customer ID:</label>
+              <input type ="text" placeholder = "customerId" name = "customerId">
+            </li>
+            <li>
+              <label>Trip Type ID:</label>
+              <input type ="text" placeholder = "tripTypeId" name = "tripTypeId">
+            </li>
+            <li>
+              <label>Package ID:</label>
+              <input type ="text" placeholder = "packageId" name = "packageId">
+            </li>
+            <li>
+              <label>Image URL:</label>
+              <input type ="text" placeholder = "image url" name = "image">
+            </li>
+            <button>Submit!</button>
+          </ul>
+        </fieldset> 
+      </form>
     </main>
     <%- include('./partials/footer'); %>
 	</div>
@@ -65,5 +61,3 @@
   <script src="/js/singlepackage.js"></script>
 </body>
 </html>
-
-
