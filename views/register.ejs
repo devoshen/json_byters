@@ -8,53 +8,75 @@
   <link rel="stylesheet" href="../css/registration.css">
   
 </head>
-  	<!-- Header & Navbar-->
-		<%- include('./partials/header'); %>
 <body>
   <div class="wrapper">
-  <div class="label">
-  <div class="input">
-  </div>
-    <form action="/register" class="form-area" method ="POST">
+    <%- include('./partials/header'); %>
+
+    <main>
+  <div>
+    <form action="/register" method ="post">
       <div class="details-area">
+
+        <fieldset>
+          <legend>Fill this form to register</legend>
         <ul>
-        <li><label for="title">Please fill out this form to register</label> </li>
-        <li><label for="firstname">First Name</lable>
-        <input type ="text" placeholder = "firstName" name = "firstName" id="firstname"></li>
-        <li><label for="lastname">Last Name</lable>
-        <input type ="text" placeholder = "last name" name = "lastName" id="lastname"></li>
-        <li><label for="address">Address</lable>
-        <input type ="text" placeholder = "address" name = "address"></li>
-        <li><label for="city">City</lable>
-        <input type ="text" placeholder = "city" name = "city" id="city"></li>
-        <li><label for="prov">Province</lable>
-        <input type ="text" placeholder = "prov" name = "prov" id ="prov"></li>
-        <li><label for="postal">Postal Code</lable>
-        <input type ="text" placeholder = "postal" name = "postal" id="postal"></li>
-        <li><label for="country">Country</lable>
-        <input type ="text" placeholder = "country" name = "country" id ="country"></li>
-        <li><label for="homePhone">Home Phone Number</lable>
-        <input type ="text" placeholder = "homePhone" name = "homePhone" id="homePhone"></li>
-        <li><label for="busPhone">Busines Phone Number</lable>
-        <input type ="text" placeholder = "busPhone" name = "busPhone" id="busPhone"></li>
-        <li><label for="username">Username</lable>
-        <input type ="text" placeholder = "username" name = "username" id="username"></li>
-        <li><label for="email">Email Address</lable>
-        <input type="email" placeholder = "email" name="email" id="email" required ></li>
-        <li><label for="password">Password</lable>
-        <input type="password" name="password" id="password" placeholder="Enter password" ></li>
-        </ul>
-        <!-- <lable for="name">Re-enter Password</lable>
-        <input type="text" name="" id="name"><br><br> -->
-        <!-- pattern=".+@company\.com" -->
+      
+        <li>
+          <label>First Name</lable>
+          <input type ="text" placeholder = "firstName" name = "firstName">
+      </li>
+        <li>
+        <label>Last Name</lable>
+        <input type ="text" placeholder = "last name" name = "lastName">
+      </li>
+        <li>
+        <label>Address</lable>
+        <input type ="text" placeholder = "address" name = "address">
+      </li>
+        <li>
+          <label>City</lable>
+          <input type ="text" placeholder = "city" name = "city">
+      </li>
+        <li><labe>Province</lable>
+        <input type ="text" placeholder = "prov" name = "prov" id ="prov">
+      </li>
+        <li><label>Postal Code</lable>
+        <input type ="text" placeholder = "postal" name = "postal">
+      </li>
+        <li>
+          <label>Country</lable>
+          <input type ="text" placeholder = "country" name = "country">
+      </li>
+        <li>
+          <label>Home Phone Number</lable>
+          <input type ="text" placeholder = "homePhone" name = "homePhone">
+      </li>
+        <li>
+          <label>Busines Phone Number</lable>
+          <input type ="text" placeholder = "busPhone" name = "busPhone">
+      </li>
+        <li>
+          <label>Username</lable>
+          <input type ="text" placeholder = "username" name = "username">
+      </li>
+        <li>
+          <label>Email Address</lable>
+          <input type="email" placeholder = "email" name="email" required >
+      </li>
+        <li>
+          <label>Password</lable>
+          <input type="password" name="password" id="password" placeholder="Enter password" >
+      </li>
+      <li>
         <button type="submit">Submit</button>
-      </div>
+      </li>
+      </ul>
+    </fieldset>
     </form>
 </div>
-</div>
-   
+ </main>
   <%- include('./partials/footer'); %>
-
+</div> 
 
   <%- include('./partials/js-menu-toggle'); %>
 </body> 
