@@ -13,6 +13,7 @@ const bookingSchema = new mongoose.Schema(
     CustomerId: Number,
     TripTypeId: String,
     PackageId: String,
+    Username: String
         
   });
 
