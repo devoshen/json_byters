@@ -21,8 +21,6 @@ const { forEach } = require('async');
 const authRoutes     = require("./routes/auth")
 const addorderRoutes    = require("./routes/addorder")
 
-
-
 const now_date = new Date();
 
 // Hide creds from repo
@@ -53,6 +51,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded ({extended:true}));
 
+app.use(require('express-session')({
+  secret:"once again Rusty wins",
+  resave: false,
+  saveUninitialized:false
+}));
+
 // Always need when working with passwords
 app.use(passport.initialize());
 app.use(passport.session())
@@ -60,6 +64,11 @@ app.use(passport.session())
 passport.use(new LocalStrategy(User.authenticate()))
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+app.use(function(req,res,next){
+  res.locals.currentUser = req.user;
+  next()
+})
 
 app.use(authRoutes)
 app.use(addorderRoutes)
@@ -78,11 +87,15 @@ app.get('/login', function (request, response) {
 })
 
 app.get('/register', function (request, response) {
-  response.render('registration');
+  response.render('register');
 })
 
 app.get('/order', function (request, response) {
   response.render('order');
+})
+
+app.get('/thankyou', function (request, response) {
+  response.render('thankyou');
 })
 
 app.get('/contact', function (request, response) {
@@ -131,6 +144,14 @@ app.get('/api/packages', function (request, response) {
   });
 })
 
+// FUNCTION IS LOGGED IN
+
+function isLoggedIn(req,res,next){
+  if(req.isAuthenticated()){
+    return next()
+  }
+  res.redirect("/login")
+}
 
 // if no file or endpoint found, send a 404 error as a response to the browser
 app.use(function (req, res, next) {
