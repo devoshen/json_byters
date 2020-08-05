@@ -3,35 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration</title>
+  <title>Login</title>
   <%- include('./partials/css-global'); %>
   <link rel="stylesheet" href="../css/login.css">
 </head>
-  	<!-- Header & Navbar-->
-    <%- include('./partials/header'); %>
 <body>
-  <div class="wrapper">
   
-    <form action="/login" class="form-area" method ="POST">
-      <div class="msg-area">
-        <!-- <label for="msg">Message</label> -->
-        <!-- <textarea id="msg"></textarea> -->
-      </div>
-      <div class="details-area">
-        
-        <lable for="username">Username</lable>
-        <input type="text" name="username" id="username"  placeholder="username" required minlength="6">
-        <lable for="password">Password</lable>
-        <input type="password" name="password" id="password" placeholder="Enter password" ><br><br>
-        
-        <button type="submit">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="Register Here" href="register">Click here to register
-      </div>
-      
+  <div class="wrapper">
+    <div class="label">
+    <%- include('./partials/header'); %>
+    <main>
+      <div>
+    <form action="/login" method ="post">
+      <% if (!error) { %>
+        <p> </p>
+     <%} else { %> 
+          <p class="welcome"> <%= error %> </p> 
+     <%} %>
+     <fieldset>
+    <legend>Please login</legend>
+      <ul>
+       <li> 
+        <label>User name</label>
+        <input type="text" placeholder="user name" name="username" required minlength="6">
+      </li> 
+      <li>
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="enter password" ><br><br>
+      </li>
+        <button type="submit">Submit</button>
+        <a id="Register Here" href="register">Click here to register
+        </ul>
+    </fieldset>
     </form>
   </div>
+  </div>
+</main>
   <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
     <%- include('./partials/footer'); %>
-
+  </div>
   <%- include('./partials/js-menu-toggle'); %>
 </body>
 </html>
