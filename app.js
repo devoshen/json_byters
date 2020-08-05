@@ -107,24 +107,10 @@ app.get('/contact', function (request, response) {
   });
 })
 
-// trail web page - to be deleted
-// app.get('/packages', function (request, response) {
-//   response.render('packages');
-// })
-
-// to be deleted
-// app.get('/test-index', function (request, response) {
-//   Package.find(function (error, packages) {
-//       response.render('test-index', packages);
-//   });
-// })
-
-
-
 // Display an individual package page when someone browses to an ID
 
 app.get('/travelpackages/:id', function (request, response) {
-  // Find the single specific destination in our module
+  // Find the single specific travelpackage in our module
   Package.findOne({ 'PackageId': request.params.id }, function (error, package) {
 
     // Check for IDs that are not in our list

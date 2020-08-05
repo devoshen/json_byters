@@ -5,28 +5,27 @@ const mongoose = require('mongoose');
 /*
 "Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection."
 */
-const bookingSchema = new mongoose.Schema(
-  { BookingId : Number,
-    BookingDate: Date,
-    BookingNo: String,
-    TravelerCount: Number, 
-    CustomerId: Number,
-    TripTypeId: String,
-    PackageId: String,
-    Username: String,
-    bookingdetail: [ 
-      {
-      type: mongoose.Schema.Types.ObjectId,
-      ref:"BookingDetail"
-      }
-    ]
-
+const bookingdetailSchema = new mongoose.Schema(
+  { BookingDetailId    : Number,
+    ItineraryNo        : Number,
+    TripStart          : Date,
+    TripEnd            : Date, 
+    Description        : String,
+    Destination        : String,
+    BasePrice          : Number,
+    AgencyCommission   : Number,
+    BookingId          : Number,
+    RegionId           : Number,
+    ClassId            : Number,
+    FeeId              : Number,
+    ProductSupplierId  : Number,
+    Username           : String,   
   });
 
 // Compile and export our model using the above Schema.
 // See: https://mongoosejs.com/docs/models.html 
 
-module.exports = mongoose.model('Booking', bookingSchema );
+module.exports = mongoose.model('BookingDetail', bookingdetailSchema );
 
 // Important: The first argument of mongoose.model() is the singular name of the collection your model is for. 
 // ** Mongoose automatically looks for the plural, lowercased version of your model name. **"

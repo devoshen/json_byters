@@ -19,36 +19,20 @@
           <legend>Book Your Travel Package</legend>
           <ul>
             <li>
-              <label>Booking ID:</label>
-              <input type="text" placeholder ="bookingId" name ="bookingId">
+              <label>Start Date:</label>  
+              <input type ="text" name = "tripStart">
             </li>
             <li>
-              <label>Booking Date:</label>
-              <input type ="text" placeholder = "bookingDate" name = "bookingDate">
-            </li>
-            <li>
-              <label>Booking No:</label>  
-              <input type ="text" placeholder = "bookingNo" name = "bookingNo">
-            </li>
-            <li>
-              <label>Travel Count:</label>
-              <input type ="text" placeholder = "travelCount" name = "travelCount">
+              <label>End Date:</label>
+              <input type ="text" name = "tripEnd">
             </li>      
             <li>
-              <label>Customer ID:</label>
-              <input type ="text" placeholder = "customerId" name = "customerId">
+              <label>Destination:</label>
+              <input type ="text" name = "destination">
             </li>
             <li>
-              <label>Trip Type ID:</label>
-              <input type ="text" placeholder = "tripTypeId" name = "tripTypeId">
-            </li>
-            <li>
-              <label>Package ID:</label>
-              <input type ="text" placeholder = "packageId" name = "packageId">
-            </li>
-            <li>
-              <label>Image URL:</label>
-              <input type ="text" placeholder = "image url" name = "image">
+              <label>Username</label>
+              <input type ="text" name = "Username" value="<%= currentUser.username %>">
             </li>
             <button>Submit!</button>
           </ul>
