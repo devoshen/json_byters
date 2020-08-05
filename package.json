@@ -4,7 +4,8 @@
   "description": "- TechCareers Cohort-4 Summer 2020\r - PROJ-207 Website Prototype Presentation 1\r - Project information is linked here https://cprg210.github.io/\r ## Team Name: Json Byters\r - Team leader: Larisa Steigenberger\r - Team members: Jaroslaw Czerwinski, Parvathy Sudhakaran, Stevyn Shen",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
