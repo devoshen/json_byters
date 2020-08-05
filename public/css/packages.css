@@ -28,10 +28,14 @@ figure img {
 
 figure div {
   display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
 
 figure div p {
-  margin: 0 30px 0 0;
+  /* width:  */
+  margin: 0;
+  /* text-align: left; */
 }
 
 figure a {
@@ -46,3 +50,7 @@ figure a {
   margin-top: 20px;
   align-self: center;
 }
+
+figure a:hover {
+  background-color: dodgerblue;
+}  

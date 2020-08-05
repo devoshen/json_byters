@@ -1,0 +1,76 @@
+body{
+  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* main {
+  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+} */
+
+main h1 {
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  color: white;
+  text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				        1px -1px 0 #000,
+               -1px -1px 0 #000;
+}
+
+main form {
+  background-color: aliceblue;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  opacity: 0.9;
+  width: 110%
+}
+
+main form fieldset{
+  /* width: 100%; */
+}
+
+main form ul { 
+  display: flex;
+  flex-direction: column;
+}
+
+main form ul li { 
+  display: flex;
+  justify-content: space-between;
+}
+
+main form ul li label{ 
+  width: 50%;
+}
+
+main form ul li input{ 
+  width: 50;
+}
+
+main form ul button{ 
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background-color: royalblue;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+
+  align-self: center;
+}
+
+main form ul button:hover {
+  background-color: dodgerblue;
+} 
+
+/* Responsive Form for phone screen size */
+@media screen and (max-width: 600px) {
+  main form ul li { 
+    flex-direction: column;
+  }
+}
