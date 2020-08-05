@@ -46,8 +46,9 @@ main form ul li label{
   width: 50%;
 }
 
-main form ul li input{ 
-  width: 50;
+main form ul li input, main form ul li select{ 
+  width: 50%;
+  background-color: azure;
 }
 
 main form ul button{ 
