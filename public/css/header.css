@@ -77,6 +77,10 @@ nav a:active {
   background-image: linear-gradient(cornflowerblue, cadetblue);
 } */
 
+/* welcome message */
+.welcome {
+  color:#cd853f;
+}
 
 /* Screen is in 'landscape' orientation (desktop view) */
 @media (orientation: landscape) {

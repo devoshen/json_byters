@@ -6,8 +6,11 @@
   <title>Registration</title>
   <%- include('./partials/css-global'); %>
   <link rel="stylesheet" href="../css/registration.css">
+  </head>
+  	<!-- Header & Navbar-->
+    <%- include('./partials/header'); %>
+
   
-</head>
 <body>
   <div class="wrapper">
     <%- include('./partials/header'); %>
@@ -68,6 +71,11 @@
           <input type="password" name="password" id="password" placeholder="Enter password" >
       </li>
       <li>
+
+        <!-- <lable for="name">Re-enter Password</lable>
+        <input type="text" name="" id="name"><br><br> -->
+        <!-- pattern=".+@company\.com" -->
+
         <button type="submit">Submit</button>
       </li>
       </ul>

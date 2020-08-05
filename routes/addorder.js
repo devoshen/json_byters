@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router();
 const Booking = require("../models/bookings.js");
+const User = require("../models/customer.js");
 
-router.get("/order", function(req, res){
+router.get("/order",isLoggedIn, function(req, res){
   res.render("order", {})
 })
 
@@ -16,6 +17,7 @@ router.post ("/order", function(req, res){
   const customerId = req.body.customerId;
   const tripTypeId = req.body.tripTypeId;
   const packageId = req.body.packageId;
+  const username = req.body.username
   
 
   const newBooking = {
@@ -26,22 +28,37 @@ router.post ("/order", function(req, res){
     CustomerId: customerId,
     TripTypeId: tripTypeId,
     PackageId: packageId,
-    
+    Username: username
   }
   // create a new customer and save it to DB
   Booking.create(newBooking, function(err, newlyCreated){
-    if(err){
-      console.log(err)
-    } else {
-      console.log(newBooking)
-      res.send("you booked it")
-    }
+    User.findOne({username: username}, function(err,foundUser){
+      if(err){
+        console.log(err);
+      } else {
+        foundUser.bookings.push(newlyCreated);
+        foundUser.save(function(err, data){
+          if(err){
+            console.log(err)
+          } else {
+            console.log(data)
+            res.redirect("/thankyou")
+          }
+        })
+      }
+    })
   })
-
 })
 
-router.get("/travelpackages/:id/order", function(req,res){
-  res.render ("order.ejs")
-})
+// router.get("/travelpackages/:id/order", function(req,res){
+//   res.render ("order.ejs")
+// })
+// FUNCTION IS LOGGED IN
 
+function isLoggedIn(req,res,next){
+  if(req.isAuthenticated()){
+    return next()
+  }
+  res.redirect("/login")
+}
 module.exports = router;

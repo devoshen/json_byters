@@ -15,7 +15,12 @@ const customerSchema = new mongoose.Schema(
     username: String,
     password: String,
     CustEmail: String,
-   
+    bookings: [ 
+      {
+      type: mongoose.Schema.Types.ObjectId,
+      ref:"Bookings"
+      }
+    ]
     
   });
 
