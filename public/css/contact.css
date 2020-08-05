@@ -1,67 +1,136 @@
-{
-  box-sizing: border-box;
-  }
-  body{
-    background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-  }
-  .wrapper{
-    width: 800px;
-    margin: 1% auto;
-    opacity: 0.8;
-    align-items: center;
-    justify-content: center; 
-  }
-  .form-area{
-    display: flex;
-    background:rgb(104, 201, 247);
-    border-radius: 25px;
-    padding: 1.9em;
-   flex-direction: row-reverse; 
-  }
-  .msg-area{
-    display: flex;
-    flex-direction: column;
-    order: 2;
-  }
-  .msg-area > textarea{
-    flex: 1;
-    min-width: 18em;
-    background: transparent;
-    color: black;
-    padding: 15px;
-  }
+body{
+  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+}
 
-  .details-area{
-    flex: 1;
-    order: 2;
-    margin-right: 2em;
-  }
-  .details-area input{
-    width: 100%;
-    background: transparent;
-    color: black;
-    border-radius: 40px;
-    font-size: 20px;
-  }
-  .details-area button{
-    padding: 1em;
-    margin-bottom: 1em;
-  }
-  .details-area button{
-    background: rgb(166, 241, 16);
-    color:red;
-    border: 0;
-    padding: 15px 50px;
-    border-radius: 40px;
-    font-size: 15px;
-    text-transform: uppercase;
-  }
-  label{
-    color:red;
-    text-transform: uppercase;
-    line-height: 40px;
-    font-family: Audiowide;
-  } 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  color: white;
+  text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				        1px -1px 0 #000,
+               -1px -1px 0 #000;
+}
+
+main form {
+  background-color: aliceblue;
+  padding: 0.5rem 1rem;
+  margin: 2rem auto;
+  border-radius: 15px;
+  opacity: 0.85;
+}
+
+main form h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+} 
+
+main form p {
+  margin: 0;
+} 
+  
+main form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+main form ul li {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+main form label {
+  width: 20ch;
+}
+
+main form input {
+  width: 20ch;
+  background-color: azure;
+}
+
+main form button {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background-color: royalblue;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .details-area{
+  flex: 1;
+  order: 2;
+  margin-right: 2em;
+}
+
+.details-area input{
+  width: 100%;
+  background: transparent;
+  color: black;
+  border-radius: 40px;
+  font-size: 20px;
+}
+
+.details-area button{
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.details-area button{
+  background: rgb(166, 241, 16);
+  color:red;
+  border: 0;
+  padding: 15px 50px;
+  border-radius: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+
+.msg-area{
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+
+.msg-area > textarea{
+  flex: 1;
+  min-width: 18em;
+  background: transparent;
+  color: black;
+  padding: 15px;
+}
+
+label{
+  color:red;
+  text-transform: uppercase;
+  line-height: 40px;
+  font-family: Audiowide;
+}  */
