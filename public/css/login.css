@@ -1,55 +1,86 @@
-
-*{
-box-sizing: border-box;
-}
 body{
   background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
 }
-.wrapper{
-  width: 800px;
-  margin: 1% auto;
-  opacity: 0.8;
-  align-items: center;
-  justify-content: center;
-}
-.form-area{
-  display: flex;
-  background:rgb(104, 201, 247);
-  border-radius: 25px;
-  padding: 1.9em;
-}
-.details-area{
-  flex: 1;
-  order: 1;
-  margin-right: 2em;
-}
-.details-area input{
-  width: 100%;
-  background: transparent;
-  color:black;
-  border-radius: 40px;
-  font-size: 20px;
-}
-.details-area button{
-  padding: 1em;
-  margin-bottom: 1em;
-}
-.details-area button{
-  background: yellowgreen;
-  color:red;
-  border: 0;
-  padding: 15px 50px;
-  border-radius: 40px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-label{
-  color:#fff;
-  text-transform: uppercase;
-  line-height: 40px;
-  font-family: Audiowide;
+
+/* main {
+  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+} */
+
+main h1 {
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  color: white;
+  text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				        1px -1px 0 #000,
+               -1px -1px 0 #000;
 }
 
+main form {
+  background-color: aliceblue;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  opacity: 0.9;
+  width: 110%;
+  margin-top: 40px;;
+}
+
+main form fieldset{
+  /* width: 100%; */
+}
+
+main form ul { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+}
+
+main form ul li { 
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+
+}
+
+main form ul li label{ 
+  width: 50%;
+}
+
+main form ul li input{ 
+  width: 50%;
+  font-size: 15px;
+  overflow: auto;
+  align-self: baseline;
+ 
+  
+}
+
+main form ul button{ 
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background-color: royalblue;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+
+  align-self: center;
+}
+
+main form ul button:hover {
+  background-color: dodgerblue;
+} 
+
+/* Responsive Form for phone screen size */
+@media screen and (max-width: 600px) {
+  main form ul li { 
+    flex-direction: column;
+  }
+}
