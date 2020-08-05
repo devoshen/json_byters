@@ -26,7 +26,7 @@ header{
 
 /* Hamburger menu */
 .btn-menu {
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
   border-width: 0;
   background-color: aliceblue;
 }
@@ -37,15 +37,21 @@ header{
 
 /* Navbar links */
 
-/* Screen is in 'landscape' orientation (mobile view), hide Navbar links */
+/* Screen is in 'portrait' orientation (mobile view), hide Navbar (Trips, Contact, Login, Register) */
 /* (desktop view is handled in the media query below) */
-nav div ul {
-  display: none;
-}
 
 nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+nav p {
+  margin: 0;
+}
+
+nav div ul {
+  display: none;
 }
 
 .visible {
@@ -59,6 +65,7 @@ nav a{
   color: midnightblue;
   padding: 0.5em 1em;
 }
+
 
 nav ul li {
   font-weight: 700;
@@ -84,17 +91,21 @@ nav a:active {
 
 /* Screen is in 'landscape' orientation (desktop view) */
 @media (orientation: landscape) {
-   
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav div ul {
+    display: flex;
+  }
+  
   /* Don't show hamburger menu on desktop view */
    nav .btn-menu {
     display: none;
   }
-
-  nav div ul {
-    display: flex;
-    /* align-items: center; */
-    /* margin: 0; */
-  }
+  
 }
 
 

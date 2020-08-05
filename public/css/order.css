@@ -4,12 +4,6 @@ body{
   background-position: center center;
 }
 
-/* main {
-  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-} */
-
 main h1 {
   font-size: 2.5rem;
   font-variant: small-caps;
@@ -24,7 +18,7 @@ main form {
   background-color: aliceblue;
   padding: 0.5rem 1rem;
   border-radius: 15px;
-  opacity: 0.9;
+  opacity: 0.85;
   width: 110%
 }
 
@@ -46,8 +40,9 @@ main form ul li label{
   width: 50%;
 }
 
-main form ul li input{ 
-  width: 50;
+main form ul li input, main form ul li select{ 
+  width: 50%;
+  background-color: azure;
 }
 
 main form ul button{ 

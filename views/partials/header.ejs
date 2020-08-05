@@ -3,24 +3,25 @@
     <a href="/"><img class="logo" src="../images/logo-no-bg.jpg" alt="Travel Experts Logo"></a>
   </div>
   <nav>
-    <button class="btn-menu">
-   <img class="img-menu" src="../images/menu.svg" alt="hamburger menu">
-    </button>
-    <div class="navbar">
+    <% if(!currentUser) { %>
+      <p class="welcome"> Welcome Traveler!</p>
+    <%} else {%> 
+      <p class="welcome"> Welcome Back! <%= currentUser.username %> </p>
+    <%  }%> 
+    <div>
+      <button class="btn-menu">
+        <img class="img-menu" src="../images/menu.svg" alt="hamburger menu">
+      </button>
       <ul> 
-         
         <li><a href="/#index-packages">Trips</a></li>
         <li><a href="/contact">Contact</a></li>
-        <li><a href="#">About</a></li>
         <% if(!currentUser) { %>
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>
-        <p class="welcome"> Welcome Stranger!</p> 
-        <%}  else {%> 
-        <li><a href="/logout">LOG OUT</a></li>
-        <p class="welcome"> Welcome: <%= currentUser.username %> </p>
+        <%} else {%> 
+          <li><a href="/logout">LogOut</a></li>
         <%  }%> 
       </ul>
-    </div>
+    </div>  
   </nav>
 </header>
