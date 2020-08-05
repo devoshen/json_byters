@@ -15,7 +15,7 @@
 ###### Jaroslaw Czerwinski
 - Frontend dev: login, register, contact, html form validation
 ###### Stevyn Shen
-- Frontend dev: index, packages, navbar, hamburger menu
+- Frontend dev: index, packages, order, header, hamburger menu, footer
 - Devops: version control with GitHub
 
 
