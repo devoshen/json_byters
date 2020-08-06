@@ -7,14 +7,13 @@ main {
   display: flex; 
   flex-flow: column;
   align-items: center; 
-  justify-content: center; 
+
 }
 
 main p { 
   
   color: #cd853f;
   font-size: 40px;
-  margin-top: 80px;
   text-shadow: -1px 1px 0 #000,
 				        1px 1px 0 #000,
 				        1px -1px 0 #000,
