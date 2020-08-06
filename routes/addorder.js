@@ -3,9 +3,29 @@ const router = express.Router();
 const Booking = require("../models/bookings.js");
 const BookingDetail = require("../models/bookingdetail.js");
 const User = require("../models/customer.js");
+const Package = require('../models/package.js');
 
-router.get("/order", isLoggedIn, function (req, res) {
-  res.render("order", {})
+router.get("/order/:id", isLoggedIn, function (req, res) {
+  Package.findOne({ 'PackageId': req.params.id }, function (error, package) {
+
+    // Check for IDs that are not in our list
+    if (!package) {
+      res.status(404);
+      res.send('404: File Not Found');
+    }
+
+    let startdate = new Date(package.PkgStartDate);
+    let formatted_pack_strtdate = startdate.getFullYear() + "/" + (startdate.getMonth() + 1) + "/" + startdate.getDate();
+
+    let enddate = new Date(package.PkgEndDate);
+    let formatted_pack_enddate = enddate.getFullYear() + "/" + (enddate.getMonth() + 1) + "/" + enddate.getDate();
+
+    let packagename = package.PkgName;
+
+    data = {startdate : formatted_pack_strtdate, enddate : formatted_pack_enddate, pck_name : packagename}
+    
+    res.render('order', {orderdata : data});
+  });
 })
 
 // //********************************* */ BOOKING MODEL ************************

@@ -1,8 +1,9 @@
 // gallery section in index page //
 // function to render a JSON list when fetched//
 
+//fetch('https://jsonbyters-travel-experts.herokuapp.com/api/packages')
 // fetch('http://localhost:3000/api/packages')
-fetch('https://jsonbyters-travel-experts.herokuapp.com/api/packages')
+fetch('http://localhost:3000/api/packages')
   .then(function (response) {
     return response.json();
   })
