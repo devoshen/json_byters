@@ -70,7 +70,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req,res,next){
   res.locals.currentUser = req.user;
-  res.locals.error = req.flash('error')
+  res.locals.error = req.flash('error');
   next()
 })
 
@@ -94,8 +94,26 @@ app.get('/register', function (request, response) {
   response.render('register');
 })
 
-app.get('/order', function (request, response) {
-  response.render('order');
+app.get('/order/:id', function (request, response) {
+  Package.findOne({ 'PackageId': request.params.id }, function (error, package) {
+
+    // Check for IDs that are not in our list
+    if (!package) {
+      response.status(404);
+      response.send('404: File Not Found');
+    }
+    let startdate = new Date(package.PkgStartDate);
+    let formatted_pack_strtdate = startdate.getFullYear() + "/" + (startdate.getMonth() + 1) + "/" + startdate.getDate();
+
+    let enddate = new Date(package.PkgEndDate);
+    let formatted_pack_enddate = enddate.getFullYear() + "/" + (enddate.getMonth() + 1) + "/" + enddate.getDate();
+
+    let packagename = package.PkgName;
+
+    data = {startdate : formatted_pack_strtdate, enddate : formatted_pack_enddate, pck_name : packagename}
+    
+    res.render('order', {orderdata : data});
+  });
 })
 
 app.get('/thankyou', function (request, response) {
