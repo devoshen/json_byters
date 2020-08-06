@@ -19,22 +19,22 @@
           <legend>Book Your Travel Package</legend>
           <ul>
             <li>
-              <label id="startdate-label">Start Date:</label>  
+              <label id="startdate-label">Start Date</label>  
               <input type ="text" name = "tripStart" value="<%= orderdata.startdate %>" id="startdate-input" >
             </li>
             <li>
-              <label>End Date:</label>
+              <label>End Date</label>
               <input type ="text" name = "tripEnd" value="<%= orderdata.enddate %>" id="enddate-input">
             </li>      
             <li>
-              <label>Chosen Package:</label>
+              <label>Chosen Package</label>
               <input type ="text" name = "destination" value="<%= orderdata.pck_name %>" class="destination-js">
             </li>
             <li>
               <label>Username</label>
               <input type ="text" name = "Username" value="<%= currentUser.username %>">
             </li>
-            <button>Submit!</button>
+            <button>Confirm Booking!</button>
           </ul>
         </fieldset> 
       </form>

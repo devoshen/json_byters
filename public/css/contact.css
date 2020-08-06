@@ -14,6 +14,7 @@ main h2 {
   font-size: 2.5rem;
   font-variant: small-caps;
   color: white;
+  text-align: center;
   text-shadow: -1px 1px 0 #000,
 				        1px 1px 0 #000,
 				        1px -1px 0 #000,
@@ -27,7 +28,8 @@ main h2 {
   margin: 1rem auto;
   border-radius: 15px;
   opacity: 0.85;
-  width: 80%
+  width: 90%;
+  max-width: 500px;
 }
 
 .form1 ul {
@@ -45,12 +47,12 @@ main h2 {
 }
 
 .form1 input {
-  width: 60%;
+  width: 70%;
   background-color: azure;
 }
 
 .form1 textarea {
-  width: 70%;
+  width: 80%;
   background-color: azure;
 }
 
@@ -75,12 +77,13 @@ main h2 {
   margin: 1rem auto;
   border-radius: 15px;
   opacity: 0.85;
-  max-width: 120ch
+  width: 90%;
+  max-width: 500px;
 }
 
 .form2 h3 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
 } 
 
@@ -101,13 +104,20 @@ main h2 {
     flex-direction: column;
   }
   
+  .form1 input {
+    width: 100%;
+  }
+  
+  .form1 textarea {
+    width: 100%;
+  }
+
   .form2 div {
     display: flex;
     flex-direction: column;
   }
 
   .form2-label {
-    /* color: blue; */
     font-weight: bold;
   }
 }

@@ -8,6 +8,7 @@ main h1 {
   font-size: 2.5rem;
   font-variant: small-caps;
   color: white;
+  text-align: center;
   text-shadow: -1px 1px 0 #000,
 				        1px 1px 0 #000,
 				        1px -1px 0 #000,
@@ -19,7 +20,9 @@ main form {
   padding: 0.5rem 1rem;
   border-radius: 15px;
   opacity: 0.85;
-  width: 110%
+  max-width: 400px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 main form fieldset{
@@ -37,11 +40,11 @@ main form ul li {
 }
 
 main form ul li label{ 
-  width: 50%;
+  width: 60%;
 }
 
-main form ul li input, main form ul li select{ 
-  width: 50%;
+main form ul li input { 
+  width: 90%;
   background-color: azure;
 }
 
@@ -67,5 +70,10 @@ main form ul button:hover {
 @media screen and (max-width: 600px) {
   main form ul li { 
     flex-direction: column;
+    align-items: center;
+  }
+  
+  main form ul li label{ 
+    width: 90%;
   }
 }
