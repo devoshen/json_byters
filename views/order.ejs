@@ -19,16 +19,16 @@
           <legend>Book Your Travel Package</legend>
           <ul>
             <li>
-              <label>Start Date</label>  
-              <input type ="text" name = "tripStart">
+              <label id="startdate-label">Start Date:</label>  
+              <input type ="text" name = "tripStart" value="<%= orderdata.startdate %>" id="startdate-input" >
             </li>
             <li>
-              <label>End Date</label>
-              <input type ="text" name = "tripEnd">
+              <label>End Date:</label>
+              <input type ="text" name = "tripEnd" value="<%= orderdata.enddate %>" id="enddate-input">
             </li>      
             <li>
-              <label>Destination</label>
-              <input type ="text" name = "destination">
+              <label>Chosen Package:</label>
+              <input type ="text" name = "destination" value="<%= orderdata.pck_name %>" class="destination-js">
             </li>
             <li>
               <label>Username</label>
@@ -42,6 +42,5 @@
     <%- include('./partials/footer'); %>
 	</div>
   <%- include('./partials/js-menu-toggle'); %>
-  <script src="/js/singlepackage.js"></script>
 </body>
 </html>
