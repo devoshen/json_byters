@@ -54,6 +54,7 @@ main form ul li label{
 
 main form ul li input{ 
   width: 80%;
+  background-color: azure;
   font-size: 15px;
   overflow: auto;
   align-self: baseline; 
