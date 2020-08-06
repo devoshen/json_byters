@@ -17,27 +17,28 @@
     <main>
       <h2>Contact Us</h2>
 
-      <form class="form1" action="/contact" method="post">
+      <form class="form1" action="https://formspree.io/xwkryjpl" method="post">
         <fieldset>
           <legend>Leave Us a Message</legend>
           <ul>
             <li>
               <lable for="name">First Name</lable>
-              <input type="text" id="firstname" required>
+              <input type="text" name="firstname" id="firstname" required>
             </li>
             <li>  
               <lable for="name">Last Name</lable>
-              <input type="text" id="lastname" required>
+              <input type="text" name="lastname" id="lastname" required>
             </li>
             <li>  
               <lable for="email">Return Email</lable>
-              <input type="email" id="email" required>
+              <input type="email" name="email" id="email" required>
             </li>   
-            <li class="msg-area">
+            <li>
               <label for="msg">Message</label>
-              <textarea id="msg" maxlength="180" rows="7" required></textarea>
+              <textarea name="message" id="msg" maxlength="180" rows="7" required></textarea>
             </li>
-            <button type="submit">Submit</button>
+            <button type="submit">Submit Message</button>
+            <p id="form1-status"></p>
           </ul>
         </fieldset>      
       </form>
@@ -50,7 +51,7 @@
             <h3><%= agency.AgncyCity %> &nbsp;Office</h3>
             <div>
               <p class="form2-label">Address:</p>
-              <p><%= agency.AgncyAddress %> &nbsp;<%= agency.AgncyCity %> &nbsp;<%= agency.AgncyProv %>,&nbsp;<%= agency.AgncyCountry %>, &nbsp;<%= agency.AgncyPostal %></p>
+              <p><%= agency.AgncyAddress %> &nbsp;<%= agency.AgncyCity %>, &nbsp;<%= agency.AgncyProv %>, &nbsp;<%= agency.AgncyCountry %> &nbsp;<%= agency.AgncyPostal %></p>
             </div>                
             <div>
               <p class="form2-label">Telephone:</p>
@@ -79,5 +80,54 @@
     <%- include('./partials/footer'); %>
   </div>
   <%- include('./partials/js-menu-toggle'); %>
+  <!-- Formspree -->
+  <!-- <script>
+    window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+
+    var form = document.getElementById("form1");
+    var button = document.getElementById("form1-button");
+    var status = document.getElementById("form1-status");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.innerHTML = "Thank YOU for reaching out!";
+    }
+
+    function error() {
+      status.innerHTML = "Oops! There was a problem.";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+    });
+
+    // helper function for sending an AJAX request
+
+    function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+    }
+
+  </script> -->
 </body>
 </html>

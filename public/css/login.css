@@ -4,16 +4,11 @@ body{
   background-position: center center;
 }
 
-/* main {
-  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-} */
-
-main h1 {
+main h2 {
   font-size: 2.5rem;
   font-variant: small-caps;
   color: white;
+  text-align: center;
   text-shadow: -1px 1px 0 #000,
 				        1px 1px 0 #000,
 				        1px -1px 0 #000,
@@ -29,7 +24,8 @@ main form {
   width: 40%;
   margin: auto;
   margin-top: 60px;
-  
+  width: 80%;
+  max-width: 400px;
 }
 
 main form fieldset{
@@ -57,11 +53,10 @@ main form ul li label{
 }
 
 main form ul li input{ 
-  width: 50%;
+  width: 80%;
   font-size: 15px;
   overflow: auto;
   align-self: baseline; 
-
 }
 
 main form ul button{ 
@@ -90,4 +85,10 @@ main form ul button:hover {
   main form ul li { 
     flex-direction: column;
   }
+
+  main form ul li input{ 
+    width: 100%; 
+  }
+  
+
 }

@@ -4,10 +4,11 @@ body{
   background-position: center center;
 }
 
-main h1 {
+main h2 {
   font-size: 2.5rem;
   font-variant: small-caps;
   color: white;
+  text-align: center;
   text-shadow: -1px 1px 0 #000,
 				        1px 1px 0 #000,
 				        1px -1px 0 #000,
@@ -19,10 +20,9 @@ main form {
   padding: 0.5rem 1rem;
   border-radius: 15px;
   opacity: 0.9;
-  width: 110%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
+  width: 90%;
+  max-width: 500px;
+  margin: 1rem auto;
 }
 
 main form fieldset{
@@ -45,8 +45,7 @@ main form ul li label{
 }
 
 main form ul li input{ 
-  width: 50;
-  
+  width: 70%;
 }
 
 main form ul button{ 
@@ -72,4 +71,9 @@ main form ul button:hover {
   main form ul li { 
     flex-direction: column;
   }
+
+  main form ul li input{ 
+    width: 100%;
+  }
+
 }

@@ -63,12 +63,12 @@
 /* Main - Vacation Packages */
 /****************************/
 
-main {
+.index-main {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-main h2 {
+.index-main h2 {
   margin-left: 0.5rem;
 }
 
