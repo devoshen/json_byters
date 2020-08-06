@@ -80,6 +80,7 @@ router.post("/order", function (req, res) {
                   console.log(err)
                 } else {
                   // console.log(username)
+                 
                   Booking.findOne({ Username: username }, function (err, foundBooking) {
                     if (err) {
                       console.log(err);
@@ -91,7 +92,10 @@ router.post("/order", function (req, res) {
                           console.log(err)
                         } else {
                           // console.log(data)
-                          res.redirect("/thankyou")
+                          count = 
+                          senddata = data.BookingId
+                          console.log(data)
+                          res.render("thankyou",{data : senddata})
                         }
                       })
                     }
