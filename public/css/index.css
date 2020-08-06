@@ -18,8 +18,9 @@
 
 .hero h2 {
   font-size: 2.5rem;
+  /* font-size: vh; */
   font-variant: small-caps;
-  color: white;
+  color: azure;
   text-shadow: -1px 1px 0 #000,
 				        1px 1px 0 #000,
 				        1px -1px 0 #000,
@@ -97,4 +98,19 @@ main h2 {
   color: black;
   text-align: center;
   /* background-color: dodgerblue; */
+}
+
+/* Responsive sizingfor phone screen size */
+@media screen and (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+  }
 }

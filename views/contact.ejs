@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration</title>
+  <title>Contact</title>
   <%- include('./partials/css-global'); %>
   <link rel="stylesheet" href="../css/contact.css">
 </head>
@@ -15,61 +15,61 @@
     <%- include('./partials/header'); %>
 
     <main>
-      <h1>Contact Us</h1>
+      <h2>Contact Us</h2>
 
-      <form class="form1">
+      <form class="form1" action="/contact" method="post">
+        <fieldset>
+          <legend>Leave Us a Message</legend>
+          <ul>
+            <li>
+              <lable for="name">First Name</lable>
+              <input type="text" id="firstname" required>
+            </li>
+            <li>  
+              <lable for="name">Last Name</lable>
+              <input type="text" id="lastname" required>
+            </li>
+            <li>  
+              <lable for="email">Return Email</lable>
+              <input type="email" id="email" required>
+            </li>   
+            <li class="msg-area">
+              <label for="msg">Message</label>
+              <textarea id="msg" maxlength="180" rows="7" required></textarea>
+            </li>
+            <button type="submit">Submit</button>
+          </ul>
+        </fieldset>      
+      </form>
+
+      <form class="form2">
         <fieldset>
           <legend>Contact Travel Experts</legend>
           <!-- <%= contact_data.agencies_data %> -->
           <% contact_data.agencies_data.forEach(function(agency){ %>
-            <h3><%= agency.AgncyCity %> &nbsp; Office</h3>
+            <h3><%= agency.AgncyCity %> &nbsp;Office</h3>
             <div>
-              <p>Address:</p>
-              <p><%= agency.AgncyAddress %> &nbsp; <%= agency.AgncyCity %> &nbsp; <%= agency.AgncyProv %>, &nbsp; <%= agency.AgncyCountry %>, &nbsp;<%= agency.AgncyPostal %></p>
+              <p class="form2-label">Address:</p>
+              <p><%= agency.AgncyAddress %> &nbsp;<%= agency.AgncyCity %> &nbsp;<%= agency.AgncyProv %>,&nbsp;<%= agency.AgncyCountry %>, &nbsp;<%= agency.AgncyPostal %></p>
             </div>                
             <div>
-              <p>Telephone:</p>
+              <p class="form2-label">Telephone:</p>
               <p><%= agency.AgncyPhone %></p>
             </div>
             <div>  
-              <p>Fax:</p>
+              <p class="form2-label">Fax:</p>
               <p><%= agency.AgncyFax %></p>
             </div>
               
             <% contact_data.agent_data.forEach(function(agent) { %>
               <% if (agent.AgencyId == agency.AgencyId) { %>
                 <div>
-                  <p><%= agent.AgtFirstName %> &nbsp; <%= agent.AgtLastName %></p>
-                  <p>Cell: &nbsp; <%= agent.AgtBusPhone %></p>
+                  <p class="form2-label"><%= agent.AgtFirstName %> &nbsp;<%= agent.AgtLastName %></p>
+                  <p>Cell: &nbsp;<%= agent.AgtBusPhone %></p>
                 </div>
               <% } %> 
             <% }); %>
           <% }); %>
-        </fieldset>      
-      </form>
-      
-      <form class="form2" action="/contact" method="post">
-        <fieldset>
-          <legend>Leave Us a Message</legend>
-          <ul>
-            <li>
-              <lable for="name">First Name</lable>
-              <input type="text" id="firstname">
-            </li>
-            <li>  
-              <lable for="name">Last Name</lable>
-              <input type="text" id="lastname">
-            </li>
-            <li>  
-              <lable for="email">Return Email</lable>
-              <input type="text" id="email">
-            </li>   
-            <li class="msg-area">
-              <label for="msg">Message</label>
-              <textarea id="msg"></textarea>
-            </li>
-            <button type="submit">Submit</button>
-          </ul>
         </fieldset>      
       </form>
       
