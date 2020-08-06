@@ -10,7 +10,7 @@ body{
   background-position: center;
 } */
 
-main h1 {
+/* main h1 {
   font-size: 2.5rem;
   font-variant: small-caps;
   color: white;
@@ -18,10 +18,9 @@ main h1 {
 				        1px 1px 0 #000,
 				        1px -1px 0 #000,
                -1px -1px 0 #000;
+} */
 
-}
-
-main form {
+/* main form {
   background-color: aliceblue;
   padding: 0.5rem 1rem;
   border-radius: 15px;
@@ -29,42 +28,46 @@ main form {
   width: 40%;
   margin: auto;
   margin-top: 60px;
-  
-}
+} */
 
-main form fieldset{
+/* main form fieldset{ */
   /* width: 100%; */
 
-}
+/* } */
 
-main form ul { 
+  /* main form ul { 
   display: flex;
   flex-direction: column;
-  align-items: flex;
-}
+  align-items: flex-
+  
+}   */
 
 main form ul li { 
-  display: flex;
-
-
-  /* justify-content: space-between; */
-  /* justify-content: center; */
-
-}
-
+  display: flex; 
+  justify-content: space-between; 
+  justify-content: center; 
+  color: #cd853f;
+  font-size: 40px;
+  margin-top: 80px;
+  text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				        1px -1px 0 #000,
+               -1px -1px 0 #000;
+ } 
+/* 
 main form ul li label{ 
   width: 50%;
-}
+} 
 
-main form ul li input{ 
+ main form ul li input{ 
   width: 50%;
   font-size: 15px;
   overflow: auto;
-  align-self: baseline; 
+  align-self: baseline;
+}  */
 
-}
-
-main form ul button{ 
+.button404 { 
+  text-decoration: none;
   font-size: 20px;
   font-weight: 600;
   text-align: center;
@@ -74,11 +77,10 @@ main form ul button{
   border-radius: 15px;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
-  align-self: center;
-}
-form li a {
-  color: #cd853f;
-
+  /* align-self: center; */
+  position: absolute;
+  top: 50%;
+  left: 40%;
 }
 
 main form ul button:hover {
