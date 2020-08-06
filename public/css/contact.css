@@ -9,7 +9,7 @@ main {
   flex-direction: column;
 }
 
-main h1 {
+main h2 {
   margin: 0;
   font-size: 2.5rem;
   font-variant: small-caps;
@@ -20,47 +20,41 @@ main h1 {
                -1px -1px 0 #000;
 }
 
-main form {
+/* form1 */
+.form1 {
   background-color: aliceblue;
   padding: 0.5rem 1rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
   border-radius: 15px;
   opacity: 0.85;
+  width: 80%
 }
 
-main form h3 {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0;
-} 
+.form1 ul {
+  display: flex;
+  flex-direction: column;
+}
 
-main form p {
-  margin: 0;
-} 
-  
-main form div {
+.form1 ul li {
   display: flex;
   justify-content: space-between;
 }
 
-
-
-main form ul li {
-  display: flex;
-  justify-content: space-between;
-
+.form1 label {
+  /* width: 20ch; */
 }
 
-main form label {
-  width: 20ch;
-}
-
-main form input {
-  width: 20ch;
+.form1 input {
+  width: 60%;
   background-color: azure;
 }
 
-main form button {
+.form1 textarea {
+  width: 70%;
+  background-color: azure;
+}
+
+.form1 button {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
@@ -74,10 +68,49 @@ main form button {
   align-self: center;
 }
 
+/* form2 */
+.form2 {
+  background-color: aliceblue;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+  border-radius: 15px;
+  opacity: 0.85;
+  max-width: 120ch
+}
+
+.form2 h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+} 
+
+.form2 p {
+  margin: 0;
+} 
+  
+.form2 div {
+  display: flex;
+  justify-content: space-between;
+}
 
 
+/* Responsive Form for phone screen size */
+@media screen and (max-width: 600px) {
+  .form1 ul li {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form2 div {
+    display: flex;
+    flex-direction: column;
+  }
 
-
+  .form2-label {
+    /* color: blue; */
+    font-weight: bold;
+  }
+}
 
 
 
