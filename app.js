@@ -10,16 +10,21 @@ const connectFlash = require('connect-flash');
 const passport= require('passport');
 const LocalStrategy = require('passport-local');
 const passportLocalMongoose = require ('passport-local-mongoose');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 
 const User = require("./models/customer.js");
 const Package = require('./models/package.js');
 const Agency = require('./models/agency.js');
 const Agent = require('./models/agent.js');
+const Booking = require('./models/bookings.js');
+const bookingdetail = require('./models/bookingdetail.js');
 const { forEach } = require('async');
+
 
 //  Set up ROUTES for authentifications, and bookings
 const authRoutes     = require("./routes/auth")
-const addorderRoutes    = require("./routes/addorder")
+const addorderRoutes    = require("./routes/addorder");
+
 
 const now_date = new Date();
 
@@ -90,6 +95,10 @@ app.get('/login', function (request, response) {
   response.render('login');
 })
 
+app.get('/thankyou', function (request, response) {
+  response.render('thankyou');
+})
+
 app.get('/register', function (request, response) {
   response.render('register');
 })
@@ -114,10 +123,6 @@ app.get('/order/:id', function (request, response) {
     
     res.render('order', {orderdata : data});
   });
-})
-
-app.get('/thankyou', function (request, response) {
-  response.render('thankyou');
 })
 
 app.get('/contact', function (request, response) {
@@ -151,6 +156,8 @@ app.get('/api/packages', function (request, response) {
     response.json(packages);
   });
 })
+
+
 
 // FUNCTION IS LOGGED IN
 

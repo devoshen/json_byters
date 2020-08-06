@@ -11,8 +11,8 @@
 <body>
   <%- include('./partials/header'); %>
       <main>
-      <h1>  Thank you for placing an order</h1>
-      
+     <%= currentUser.CustFirstName %>
+     
     </main>
   
   </div>
@@ -24,3 +24,17 @@
 </body>
 
 </html>
+<!-- BookingDate: Date,
+    BookingNo: String,
+    TravelerCount: Number, 
+    CustomerId: Number,
+    TripTypeId: String,
+    PackageId: String,
+    Username: String,
+    bookingdetail: [ 
+      {
+      type: mongoose.Schema.Types.ObjectId,
+      ref:"BookingDetail"
+      }
+    ] -->
+
