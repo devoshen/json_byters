@@ -3,49 +3,15 @@ body{
   background-size: cover;
   background-position: center center;
 }
-
-/* main {
-  background-image: url("../images/HERO-christopher-czermak-AeiXAB8n8Mc-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-} */
-
-/* main h1 {
-  font-size: 2.5rem;
-  font-variant: small-caps;
-  color: white;
-  text-shadow: -1px 1px 0 #000,
-				        1px 1px 0 #000,
-				        1px -1px 0 #000,
-               -1px -1px 0 #000;
-} */
-
-/* main form {
-  background-color: aliceblue;
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
-  opacity: 0.9;
-  width: 40%;
-  margin: auto;
-  margin-top: 60px;
-} */
-
-/* main form fieldset{ */
-  /* width: 100%; */
-
-/* } */
-
-  /* main form ul { 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-
-  
-}   */
-
-main form ul li { 
+main {
   display: flex; 
-  justify-content: space-between; 
+  flex-flow: column;
+  align-items: center; 
   justify-content: center; 
+}
+
+main p { 
+  
   color: #cd853f;
   font-size: 40px;
   margin-top: 80px;
@@ -54,17 +20,7 @@ main form ul li {
 				        1px -1px 0 #000,
                -1px -1px 0 #000;
  } 
-/* 
-main form ul li label{ 
-  width: 50%;
-} 
 
- main form ul li input{ 
-  width: 50%;
-  font-size: 15px;
-  overflow: auto;
-  align-self: baseline;
-}  */
 
 .button404 { 
   text-decoration: none;
@@ -78,9 +34,9 @@ main form ul li label{
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   /* align-self: center; */
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  left: 40%;
+  /* left: 50%; */
 }
 
 main form ul button:hover {
