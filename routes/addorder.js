@@ -69,32 +69,32 @@ router.post("/order", function (req, res) {
   }
 
   BookingDetail.create(newBookingDetail, function (err, newlyCreated) {
-    Booking.create(newBooking, function (err, createBooking) {
-      User.findOne({ username: username }, function (err, foundUser) {
-        if (err) {
-          console.log(err);
-        } else {
-          foundUser.bookings.push(createBooking);
-          foundUser.save(function (err, data) {
+        Booking.create(newBooking, function (err, createBooking) {
+         User.findOne({ username: username }, function (err, foundUser) {
             if (err) {
-              console.log(err)
+              console.log(err);
             } else {
-              // console.log(username)
-              Booking.findOne({ Username: username }, function (err, foundBooking) {
+              foundUser.bookings.push(createBooking);
+              foundUser.save(function (err, data) {
                 if (err) {
-                  console.log(err);
+                  console.log(err)
                 } else {
-                  // console.log(foundBooking)
-                  foundBooking.bookingdetail.push(newlyCreated);
-                  foundBooking.save(function (err, data) {
+                  // console.log(username)
+                  Booking.findOne({ Username: username }, function (err, foundBooking) {
                     if (err) {
-                      console.log(err)
+                      console.log(err);
                     } else {
-                      console.log(data)
-                      res.redirect("/thankyou")
+                      // console.log(foundBooking)
+                      foundBooking.bookingdetail.push(newlyCreated);
+                      foundBooking.save(function (err, data) {
+                        if (err) {
+                          console.log(err)
+                        } else {
+                          // console.log(data)
+                          res.redirect("/thankyou")
+                        }
+                      })
                     }
-                  })
-                }
               })
             }
           })
@@ -116,3 +116,4 @@ function isLoggedIn(req, res, next) {
   res.redirect("/login")
 }
 module.exports = router;
+

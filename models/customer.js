@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const passportLocalMongoose = require ('passport-local-mongoose');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 
 const customerSchema = new mongoose.Schema(
   { 
@@ -26,6 +27,7 @@ const customerSchema = new mongoose.Schema(
 
 // Compile and export our model using the above Schema.
 // See: https://mongoosejs.com/docs/models.html 
+customerSchema.plugin(AutoIncrement, {inc_field: 'CustomerId', start_seq: 144 })
 customerSchema.plugin(passportLocalMongoose);
 module.exports = mongoose.model('Customer', customerSchema );
 

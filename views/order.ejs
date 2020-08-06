@@ -7,12 +7,13 @@
   
   <link rel="stylesheet" href="../css/order.css">
   <%- include('./partials/css-global'); %>
-
+ 
 </head>
 <body>
 	<div class="wrapper">
 		<%- include('./partials/header'); %>
 		<main>
+      <%= orderdata %>
       <h1>Bookings</h1>
       <form  action="/order" method="post">
         <fieldset>
