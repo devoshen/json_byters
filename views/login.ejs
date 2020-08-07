@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,47 +8,53 @@
   <%- include('./partials/css-global'); %>
   <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
-  
+
   <div class="wrapper">
     <div class="label">
-    <%- include('./partials/header'); %>
-    <main>
-      <h2>Welcome Back Traveler!</h2>
-      <div>
-    <form action="/login" method ="post">
-      <% if (!error) { %>
-        <p> </p>
-     <%} else { %> 
-          <p class="welcome"> <%= error %> </p> 
-     <%} %>
-     <fieldset>
-    <legend>Please login</legend>
-      <ul>
-       <li> 
-        <label>User name</label>
-        <input type="text" name="username" required minlength="4">
-      </li> 
-      <li>
-        <label>Password</label>
-        <input type="password" name="password" id="password" required ><br><br>
-      </li>
-      <li>
-        <button type="submit">Submit</button>
-      </li>
-      <li>
-        <a id="Register Here" href="/register" style="text-decoration: none">Not a member yet? Click here to register</a>
-        </li>
-        </ul>
-    </fieldset>
-    </form>
-  </div>
-  </div>
-</main>
-  <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+      <%- include('./partials/header'); %>
+      <main>
+        <h2>Welcome Back Traveler!</h2>
+        <div>
+          <form action="/login" method="post">
+            <% if (!error) { %>
+            <p> </p>
+            <%} else { %>
+            <p class="welcome"> <%= error %> </p>
+            <%} %>
+            <fieldset>
+              <legend>Please login</legend>
+<!-- setting up required fields for login page -->
+              <ul>
+                <li>
+                  <label>User name</label>
+                  <input type="text" name="username" required minlength="4">
+                </li>
+
+                <li>
+                  <label>Password</label>
+                  <input type="password" name="password" id="password" required><br><br>
+                </li>
+                  <!-- submit button set up -->
+                <li>
+                   <button type="submit">Submit</button> 
+                </li>
+                <li>
+
+                  <a id="Register Here" href="/register" style="text-decoration: none">Not a member yet? Click here to
+                    register</a>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+    </main>
+    <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
     <%- include('./partials/footer'); %>
   </div>
   <%- include('./partials/js-menu-toggle'); %>
 </body>
-</html>
 
+</html>

@@ -19,6 +19,7 @@ main p {
                -1px -1px 0 #000;
  } 
 
+ /* styling re-direct buton */
 
 .button404 { 
   text-decoration: none;
@@ -31,10 +32,6 @@ main p {
   border-radius: 15px;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
-  /* align-self: center; */
-  /* position: absolute;
-  top: 50%;
-  /* left: 50%; */
 }
 
 main form ul button:hover {
