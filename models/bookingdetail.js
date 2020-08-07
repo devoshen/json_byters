@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const AutoIncrement = require('mongoose-sequence')(mongoose);
 
+// Step 1: Define bookingdetail Schema
+
 const bookingdetailSchema = new mongoose.Schema(
   {
     ItineraryNo        : Number,

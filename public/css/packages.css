@@ -1,3 +1,4 @@
+/* stying backend generated package start/end dates showing red when expired */
 .date {
   color:red;
   font-size: 900;
@@ -18,14 +19,13 @@ figure {
 figure h2 {
   text-align: center;
   margin: 0;
-  /* background-color: cadetblue; */
 }
 
 figure img {
   width: 100%;
-  /* padding: 10px; */
 }
 
+/* list backend generated data in neat fashion */
 figure div {
   display: flex;
   justify-content: space-around;
@@ -33,11 +33,10 @@ figure div {
 }
 
 figure div p {
-  /* width:  */
   margin: 0;
-  /* text-align: left; */
 }
 
+/* Book Now button links order page */
 figure a {
   text-decoration: none;
   font-size: 20px;
