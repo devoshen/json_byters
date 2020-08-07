@@ -32,22 +32,27 @@
 ###### Jaroslaw Czerwinski
 - Frontend dev: Working on design, and features of login, register, contact, and custom 404 pages. Major scope of my work was to create professionally looking pages that would have same layout, colors, backgrounds, sizes, to achieve required effect. I implemented some basic HTML form validation for customer input, the more robust validation of customer input is done on back end in our project through Mongoose Passport.  Most of front-end project was done by implementing HTML, CSS, and JavaScript. As a team we followed convention told in class for creating and separating code into specific groups like CSS files, HTML files, partials, views, public etc. We employed Git and GitHub for our collaboration and merging results of our individual work. 
 ###### Stevyn Shen
-- Frontend dev: index, packages, order, header, hamburger menu, footer
-- Devops: version control with GitHub
-
+- Frontend dev: Veiws, partials, and css styling of the following index, packages, order, header, footer. 
+- Devops: Version control with GitHub. Guiding team members to work on local branch and merge to master.
 
 ### Frontend Tasks:
-- To Do Items:Creating pages: home, contact, login, register, packages, order, 404, thank you.
-Implementing same design across all pages to ensure professional look and functionality. 
+- Create frontend pages: home, contact, login, register, packages, order, 404,
+- Implemented same design across all pages to ensure consistend look and functionality. 
+- Responsiveness: website friendly for mobile and desktop screen size (hamburger menu available in mobile view)
+- Responsiveness: ensure form containers adjusted to different screen size (media query)
 
 ### Frontend Notes:
-- Problems encoutered and problem solving methodology
-- Future improvements
--Some problems with styling we encounter during the process of this project we resolved by implemeting specific standards for all pages. Our standards included colors, fornts, backrounds and overall visual consistency of all pages accross the board. 
+- Some problems with styling we encounter during the process of this project we resolved by implemeting specific standards for all pages. Our standards included colors, fornts, backrounds and overall visual consistency of all pages accross the board. 
 Problem solving we did through group discussions and implementing brain storming. 
--Future improvements to our website could include some animation to make already attractive pages alive. 
-We would implemet social media conections as well. 
 
+- Future improvements:
+    - Google Maps integration to Contact page
+    - Confirmation/ThankYou page once user message successfully submitted 
+    - Form validation with JS (clear and concise messages to help user to fill Forms as our database desires)
+    - Current page indication / highlighting 
+    - Future improvements to our website could include some animation to make already attractive pages alive. 
+    - We would implemet social media conections as well. 
+    
 ### Backend Tasks:
 - Paths & Endpoint handlers are defined
 
@@ -80,6 +85,7 @@ We would implemet social media conections as well.
 - [Google Fonts](https://developers.google.com/fonts)
 - [Lorem Picsum](https://picsum.photos)
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn)
+- [CSS-Tricks](https://css-tricks.com/)
 - [Inspiration from "expedia.ca"](https://www.expedia.ca/)
 - [StackOverflow] (https://stackoverflow.com/)
 
