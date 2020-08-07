@@ -25,6 +25,9 @@ main form {
   max-width: 500px;
   margin: 1rem auto;
 }
+sup {
+  color: red;
+}
 
 main form ul { 
   display: flex;

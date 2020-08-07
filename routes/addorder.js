@@ -21,15 +21,15 @@ router.get("/order/:id", isLoggedIn, function (req, res) {
     let formatted_pack_enddate = enddate.getFullYear() + "/" + (enddate.getMonth() + 1) + "/" + enddate.getDate();
 
     let packagename = package.PkgName;
+    let packageid = package.PackageId;
+    data = { startdate: formatted_pack_strtdate, enddate: formatted_pack_enddate, pck_name: packagename, pck_id: packageid }
 
-    data = {startdate : formatted_pack_strtdate, enddate : formatted_pack_enddate, pck_name : packagename}
-    
-    res.render('order', {orderdata : data});
+    res.render('order', { orderdata: data });
   });
 })
 
 // //********************************* */ BOOKING MODEL ************************
-router.post("/order", function (req, res) {
+router.post("/order/:id", function (req, res) {
 
   const bookingDetailId = req.body.bookingDetailId;
   const itineraryNo = req.body.itineraryNo;
@@ -39,7 +39,6 @@ router.post("/order", function (req, res) {
   const destination = req.body.destination;
   const basePrice = req.body.basePrice;
   const agencyCommission = req.body.agencyCommission;
-  const bookingId = req.body.bookingId;
   const regionId = req.body.regionId;
   const classId = req.body.classId;
   const feeId = req.body.feeId;
@@ -55,7 +54,6 @@ router.post("/order", function (req, res) {
     Destination: destination,
     BasePrice: basePrice,
     AgencyCommission: agencyCommission,
-    BookingId: bookingId,
     RegionId: regionId,
     ClassId: classId,
     FeeId: feeId,
@@ -64,41 +62,55 @@ router.post("/order", function (req, res) {
   }
 
   const newBooking = {
-    BookingId: bookingId,
-    Username: username
+    Username: username,
+    PackageId: req.params.id,
   }
 
   BookingDetail.create(newBookingDetail, function (err, newlyCreated) {
-        Booking.create(newBooking, function (err, createBooking) {
-         User.findOne({ username: username }, function (err, foundUser) {
+    Booking.create(newBooking, function (err, createBooking) {
+      User.findOne({ username: username }, function (err, foundUser) {
+        if (err) {
+          console.log(err);
+        } else {
+          foundUser.bookings.push(createBooking);
+          foundUser.save(function (err, data) {
             if (err) {
-              console.log(err);
+              console.log(err)
             } else {
-              foundUser.bookings.push(createBooking);
-              foundUser.save(function (err, data) {
+              // console.log(username)
+
+              Booking.findOne({ BookingId: createBooking.BookingId }, function (err, foundBooking) {
                 if (err) {
-                  console.log(err)
+                  console.log(err);
                 } else {
-                  // console.log(username)
-                 
-                  Booking.findOne({ Username: username }, function (err, foundBooking) {
+                  // console.log(foundBooking)
+                  foundBooking.bookingdetail.push(newlyCreated);
+                  foundBooking.save(function (err, data) {
                     if (err) {
-                      console.log(err);
+                      console.log(err)
                     } else {
-                      // console.log(foundBooking)
-                      foundBooking.bookingdetail.push(newlyCreated);
-                      foundBooking.save(function (err, data) {
+                      BookingDetail.findOne({ Username: username }, function (err, foundDetails) {
                         if (err) {
                           console.log(err)
                         } else {
-                          // console.log(data)
-                          count = 
-                          senddata = data.BookingId
-                          console.log(data)
-                          res.render("thankyou",{data : senddata})
+                          console.log(foundDetails)
+                          
+                          let startdate = new Date(foundDetails.TripStart);
+                          let formatted_pack_strtdate = startdate.getFullYear() + "/" + (startdate.getMonth() + 1) + "/" + startdate.getDate();
+
+                          let enddate = new Date(foundDetails.TripEnd);
+                          let formatted_pack_enddate = enddate.getFullYear() + "/" + (enddate.getMonth() + 1) + "/" + enddate.getDate();
+
+                          data = { booking: data, details: foundDetails, enddate: formatted_pack_enddate, startdate: formatted_pack_strtdate}
+                          
+                          res.render("thankyou", { data: data })
+                          // console.log(foundBooking)
                         }
                       })
                     }
+
+                  })
+                }
               })
             }
           })
@@ -107,6 +119,7 @@ router.post("/order", function (req, res) {
     })
   })
 })
+
 
 // router.get("/travelpackages/:id/order", function(req,res){
 //   res.render ("order.ejs")

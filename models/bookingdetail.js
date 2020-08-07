@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
 const AutoIncrement = require('mongoose-sequence')(mongoose);
-// Step 1: Define our Schema
-// See: https://mongoosejs.com/docs/guide.html
-/*
-"Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection."
-*/
+// Step 1: Define bookingdetail Schema
+
 const bookingdetailSchema = new mongoose.Schema(
   {
     ItineraryNo        : Number,
@@ -24,7 +21,7 @@ const bookingdetailSchema = new mongoose.Schema(
 
 // Compile and export our model using the above Schema.
 // See: https://mongoosejs.com/docs/models.html 
-bookingdetailSchema.plugin(AutoIncrement, {inc_field: 'BookingDetailId', start_seq: 1300 })
+bookingdetailSchema.plugin(AutoIncrement, {inc_field: 'BookingDetailId', start_seq: 2000 })
 module.exports = mongoose.model('BookingDetail', bookingdetailSchema );
 
 // Important: The first argument of mongoose.model() is the singular name of the collection your model is for. 
