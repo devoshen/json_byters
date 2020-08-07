@@ -103,9 +103,41 @@ app.get('/register', function (request, response) {
   response.render('register');
 })
 
-app.get('/order/:id', function (request, response) {
+app.get('/contact', function (request, response) {
+  Agency.find(function (error, agencies) {
+    Agent.find(function (error, agent) {
+      data = { agencies_data: agencies, agent_data: agent }
+      response.render('contact', { contact_data: data });
+    })
+  });
+})
+
+// JSON api endpoint
+
+app.get('/api/packages', function (request, response) {
+  Package.find(function (error, packages) {
+    response.json(packages);
+  });
+})
+
+
+// Display an individual package page when someone browses to an ID
+
+app.get('/travelpackages/:id', function (request, response) {
+  // Find the single specific travelpackage in our module
   Package.findOne({ 'PackageId': request.params.id }, function (error, package) {
 
+    // Check for IDs that are not in our list
+    if (!package) {
+      response.status(404);
+      response.render('404', { 'title': "404" });
+    }
+    response.render('packages', package);
+  });
+})
+
+app.get('/order/:id', function (request, response) {
+  Package.findOne({ 'PackageId': request.params.id }, function (error, package) {
     // Check for IDs that are not in our list
     if (!package) {
       response.status(404);
@@ -118,45 +150,13 @@ app.get('/order/:id', function (request, response) {
     let formatted_pack_enddate = enddate.getFullYear() + "/" + (enddate.getMonth() + 1) + "/" + enddate.getDate();
 
     let packagename = package.PkgName;
+    let packageid = package.PackageId;
 
-    data = {startdate : formatted_pack_strtdate, enddate : formatted_pack_enddate, pck_name : packagename}
+    data = {startdate : formatted_pack_strtdate, enddate : formatted_pack_enddate, pck_name : packagename, pck_id : packageid }
     
     res.render('order', {orderdata : data});
   });
 })
-
-app.get('/contact', function (request, response) {
-  Agency.find(function (error, agencies) {
-    Agent.find(function (error, agent) {
-      data = { agencies_data: agencies, agent_data: agent }
-      response.render('contact', { contact_data: data });
-    })
-  });
-})
-
-// Display an individual package page when someone browses to an ID
-
-app.get('/travelpackages/:id', function (request, response) {
-  // Find the single specific travelpackage in our module
-  Package.findOne({ 'PackageId': request.params.id }, function (error, package) {
-
-    // Check for IDs that are not in our list
-    if (!package) {
-      response.status(404);
-      response.send('404: File Not Found');
-    }
-    response.render('packages', package);
-  });
-})
-
-// JSON api endpoint
-
-app.get('/api/packages', function (request, response) {
-  Package.find(function (error, packages) {
-    response.json(packages);
-  });
-})
-
 
 
 // FUNCTION IS LOGGED IN
