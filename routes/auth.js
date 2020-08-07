@@ -1,26 +1,26 @@
 const express = require('express')
 const router = express.Router();
-const passport= require('passport');
+const passport = require('passport');
 const User = require("../models/customer.js");
 const LocalStrategy = require('passport-local');
-const passportLocalMongoose = require ('passport-local-mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 // ***************************************** AUTHENTICATIONS ROUTES******************
 
-router.get("/", function(req, res){
+router.get("/", function (req, res) {
   res.render("index", {})
 })
-router.get("/login", function(req, res){
+router.get("/login", function (req, res) {
   res.render("login", {})
 })
-router.get("/register", function(req, res){
+router.get("/register", function (req, res) {
   res.render("register", {})
 })
 
 // ********************************************** COLLECT POST REQUESTS FROM DB*********************************
 // // ********************************** CUSTOMER MODEL***********************
-router.post ("/register", function(req, res){
-  
+router.post("/register", function (req, res) {
+
 
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
@@ -36,10 +36,10 @@ router.post ("/register", function(req, res){
   const email = req.body.email;
 
   const newCustomer = {
-    
+
     CustFirstName: firstName,
     CustLastName: lastName,
-    CustAddress: address, 
+    CustAddress: address,
     CustCity: city,
     CustProv: prov,
     CustPostal: postal,
@@ -48,44 +48,45 @@ router.post ("/register", function(req, res){
     CustBusPhone: busPhone,
     username: username,
     CustEmail: email,
-   
+
   }
 
-  User.register(newCustomer, password, function(err, user){
-    if (err){
+  //  Add the new use to database and check for authentification
+  User.register(newCustomer, password, function (err, user) {
+    if (err) {
       console.log(err);
       return res.render('register')
-    } 
-    passport.authenticate("local")(req,res,function(){
-      res.render("index", {'currentUser': newCustomer})
+    }
+    passport.authenticate("local")(req, res, function () {
+      res.render("index", { 'currentUser': newCustomer })
     })
   })
 })
 
 
 // /  LOGIN ROUTE
-router.get("/login", function(req,res){
+router.get("/login", function (req, res) {
   res.render("login")
 })
 
-router.post("/login",passport.authenticate("local",{
-  successRedirect:"/",
+router.post("/login", passport.authenticate("local", {
+  successRedirect: "/",
   failureRedirect: "/login",
-  failureFlash:true
- 
+  failureFlash: true
+
 }),
-function(res,res){
-})
+  function (res, res) {
+  })
 
 // LOGOUT ROUTE
 
-router.get("/logout", function(req, res){
+router.get("/logout", function (req, res) {
   req.logout();
   res.redirect("/")
 })
 
-function isLoggedIn(req,res,next){
-  if(req.isAuthenticated()){
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()) {
     return next()
   }
   res.redirect("/login")

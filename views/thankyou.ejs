@@ -15,65 +15,64 @@
     <h1> Booking confirmation</h1>
 
     <h4> Thank you for booking with us!</h4>
-      <div class="wrapper">  
-        <form action="/">
-         <fieldset>
+    <div class="wrapper">
+      <form action="/">
+        <fieldset>
           <legend class="legend">Summary</legend>
-            <ul>
-              <li>
-                <label>Booking Id</label>
-                <input type ="text" name = "bid" value="<%= data.booking.BookingId %>">
-              </li> 
-              <li>
-                <label>Customer Name</label>  
-                <input type ="text" name = "name" value="<%= currentUser.CustFirstName %>  <%= currentUser.CustLastName %> ">
-              </li>
-              <li>
-                <label>Address</label>
-                <input type ="text" name = "address" value="<%= currentUser.CustAddress %> <%= currentUser.CustCity %> <%= currentUser.CustProv %> <%= currentUser.CustCountry %>">
-              </li> 
-              <li>
-                <label>Postal</label>
-                <input type ="text" name = "post" value="<%= currentUser.CustPostal %> <%= currentUser.CustCountry %>">
-              </li>  
-              <li>
-                <label>Country</label>
-                <input type ="text" name = "country" value="<%= currentUser.CustCountry %>">
-              </li>    
-              <li>
-                <label>Phone number</label>
-                <input type ="text" name = "phno" value="<%= currentUser.CustHomePhone %>">
-              </li>  
-              <li>
-                <label>Destination</label>
-                <input type ="text" name = "dest" value="<%= data.details.Destination %>">
-              </li> 
-              <li>
-                <label>Trip Start Date</label>
-                <input type ="text" name = "tripstart" value="<%= data.startdate %>">
-              </li> 
-              <li>
-                <label>Trip End Date</label>
-                <input type ="text" name = "tripEnd" value="<%= data.enddate %>">
-              </li>
-            
-              <li>
-                <label>Email account</label>
-                <input type ="text" name = "email" value="<%= currentUser.CustEmail %>">
-              </li>
-              <a id="Register Here" href="/" style="text-decoration: none">Take me to home page!</a>
-            </ul>
-          </fieldset> 
+          <ul>
+            <li>
+              <label>Booking Id</label>
+              <input type="text" name="bid" value="<%= data.booking.BookingId %>">
+            </li>
+            <li>
+              <label>Customer Name</label>
+              <input type="text" name="name" value="<%= currentUser.CustFirstName %>  <%= currentUser.CustLastName %> ">
+            </li>
+            <li>
+              <label>Address</label>
+              <input type="text" name="address"
+                value="<%= currentUser.CustAddress %> <%= currentUser.CustCity %> <%= currentUser.CustProv %> <%= currentUser.CustCountry %>">
+            </li>
+            <li>
+              <label>Postal</label>
+              <input type="text" name="post" value="<%= currentUser.CustPostal %> <%= currentUser.CustCountry %>">
+            </li>
+            <li>
+              <label>Country</label>
+              <input type="text" name="country" value="<%= currentUser.CustCountry %>">
+            </li>
+            <li>
+              <label>Phone number</label>
+              <input type="text" name="phno" value="<%= currentUser.CustHomePhone %>">
+            </li>
+            <li>
+              <label>Destination</label>
+              <input type="text" name="dest" value="<%= data.details.Destination %>">
+            </li>
+            <li>
+              <label>Trip Start Date</label>
+              <input type="text" name="tripstart" value="<%= data.startdate %>">
+            </li>
+            <li>
+              <label>Trip End Date</label>
+              <input type="text" name="tripEnd" value="<%= data.enddate %>">
+            </li>
+
+            <li>
+              <label>Email account</label>
+              <input type="text" name="email" value="<%= currentUser.CustEmail %>">
+            </li>
+            <a id="Register Here" href="/" style="text-decoration: none">Take me to home page!</a>
+          </ul>
+        </fieldset>
       </form>
-    </div>     
-</main>
-  
- 
+    </div>
+  </main>
+
+
   <%- include('./partials/footer'); %>
   <%- include('./partials/js-menu-toggle'); %>
 
-  <!-- javascript link -->
-
-</body>
+ </body>
 
 </html>

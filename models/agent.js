@@ -4,14 +4,14 @@ const mongoose = require('mongoose');
 
 const agentSchema = new mongoose.Schema(
   {
-    AgentId:          Number,
-    AgtFirstName:     String,
+    AgentId: Number,
+    AgtFirstName: String,
     AgtMiddleInitial: String,
-    AgtLastName:      String,
-    AgtBusPhone:      String,
-    AgtEmail:         String,
-    AgtPosition:      String,
-    AgencyId:         Number
+    AgtLastName: String,
+    AgtBusPhone: String,
+    AgtEmail: String,
+    AgtPosition: String,
+    AgencyId: Number
   }
 );
 
