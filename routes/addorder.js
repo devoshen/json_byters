@@ -70,33 +70,39 @@ router.post("/order/:id", function (req, res) {
     Booking.create(newBooking, function (err, createBooking) {
       User.findOne({ username: username }, function (err, foundUser) {
         if (err) {
-          console.log(err);
+            console.log(err);
         } else {
-          foundUser.bookings.push(createBooking);
-          foundUser.save(function (err, data) {
-            if (err) {
-              console.log(err)
-            } else {
-              // console.log(username)
-
-              Booking.findOne({ Username: username }, function (err, foundBooking) {
-                if (err) {
-                  console.log(err);
-                } else {
-                  // console.log(foundBooking)
-                  foundBooking.bookingdetail.push(newlyCreated);
-                  foundBooking.save(function (err, data) {
+            foundUser.bookings.push(createBooking);
+            foundUser.save(function (err, data) {
+              if (err) {
+                console.log(err)
+              } else {
+                  // console.log(username)
+                 
+                  Booking.findOne({BookingId: createBooking.BookingId}, function (err, foundBooking) {
                     if (err) {
-                      console.log(err)
+                      console.log(err);
                     } else {
-                      // console.log(data)
-
-                      senddata = data.BookingId
-                      console.log(data)
-                      res.render("thankyou", { data: senddata })
-                    }
-                  })
-                }
+                      // console.log(foundBooking)
+                      foundBooking.bookingdetail.push(newlyCreated);
+                      foundBooking.save(function (err, data) {
+                        if (err) {
+                          console.log(err)
+                        } else {
+                          BookingDetail.findOne({Username: username }, function (err, foundDetails) {
+                            if (err) {
+                              console.log(err)
+                            } else {
+                              console.log(foundDetails)
+                                data = { booking: data, details: foundDetails }
+                                res.render("thankyou",{data : data})
+                                // console.log(foundBooking)
+                                  }
+                            })
+                        }
+                      
+                   })
+                  } 
               })
             }
           })
@@ -105,6 +111,7 @@ router.post("/order/:id", function (req, res) {
     })
   })
 })
+
 
 // router.get("/travelpackages/:id/order", function(req,res){
 //   res.render ("order.ejs")
