@@ -25,14 +25,14 @@
               <lable for="name">First Name</lable>
               <input type="text" name="firstname" id="firstname" required>
             </li>
-            <li>  
+            <li>
               <lable for="name">Last Name</lable>
               <input type="text" name="lastname" id="lastname" required>
             </li>
-            <li>  
+            <li>
               <lable for="email">Return Email</lable>
               <input type="email" name="email" id="email" required>
-            </li>   
+            </li>
             <li>
               <label for="msg">Message</label>
               <textarea name="message" id="msg" maxlength="180" rows="7" required></textarea>
@@ -40,7 +40,7 @@
             <button type="submit">Submit Message</button>
             <p id="form1-status"></p>
           </ul>
-        </fieldset>      
+        </fieldset>
       </form>
 
       <form class="form2">
@@ -48,86 +48,40 @@
           <legend>Contact Travel Experts</legend>
           <!-- <%= contact_data.agencies_data %> -->
           <% contact_data.agencies_data.forEach(function(agency){ %>
-            <h3><%= agency.AgncyCity %> &nbsp;Office</h3>
-            <div>
-              <p class="form2-label">Address:</p>
-              <p><%= agency.AgncyAddress %> &nbsp;<%= agency.AgncyCity %>, &nbsp;<%= agency.AgncyProv %>, &nbsp;<%= agency.AgncyCountry %> &nbsp;<%= agency.AgncyPostal %></p>
-            </div>                
-            <div>
-              <p class="form2-label">Telephone:</p>
-              <p><%= agency.AgncyPhone %></p>
-            </div>
-            <div>  
-              <p class="form2-label">Fax:</p>
-              <p><%= agency.AgncyFax %></p>
-            </div>
-              
-            <% contact_data.agent_data.forEach(function(agent) { %>
-              <% if (agent.AgencyId == agency.AgencyId) { %>
-                <div>
-                  <p class="form2-label"><%= agent.AgtFirstName %> &nbsp;<%= agent.AgtLastName %></p>
-                  <p>Cell: &nbsp;<%= agent.AgtBusPhone %></p>
-                </div>
-              <% } %> 
-            <% }); %>
+          <h3><%= agency.AgncyCity %> &nbsp;Office</h3>
+          <div>
+            <p class="form2-label">Address:</p>
+            <p><%= agency.AgncyAddress %> &nbsp;<%= agency.AgncyCity %>, &nbsp;<%= agency.AgncyProv %>,
+              &nbsp;<%= agency.AgncyCountry %> &nbsp;<%= agency.AgncyPostal %></p>
+          </div>
+          <div>
+            <p class="form2-label">Telephone:</p>
+            <p><%= agency.AgncyPhone %></p>
+          </div>
+          <div>
+            <p class="form2-label">Fax:</p>
+            <p><%= agency.AgncyFax %></p>
+          </div>
+
+          <% contact_data.agent_data.forEach(function(agent) { %>
+          <% if (agent.AgencyId == agency.AgencyId) { %>
+          <div>
+            <p class="form2-label"><%= agent.AgtFirstName %> &nbsp;<%= agent.AgtLastName %></p>
+            <p>Cell: &nbsp;<%= agent.AgtBusPhone %></p>
+          </div>
+          <% } %>
           <% }); %>
-        </fieldset>      
+          <% }); %>
+        </fieldset>
       </form>
-      
+
     </main>
 
     <!-- footer -->
     <%- include('./partials/footer'); %>
   </div>
   <%- include('./partials/js-menu-toggle'); %>
-  <!-- Formspree -->
-  <!-- <script>
-    window.addEventListener("DOMContentLoaded", function() {
 
-    // get the form elements defined in your form HTML above
-
-    var form = document.getElementById("form1");
-    var button = document.getElementById("form1-button");
-    var status = document.getElementById("form1-status");
-
-    // Success and Error functions for after the form is submitted
-
-    function success() {
-      form.reset();
-      button.style = "display: none ";
-      status.innerHTML = "Thank YOU for reaching out!";
-    }
-
-    function error() {
-      status.innerHTML = "Oops! There was a problem.";
-    }
-
-    // handle the form submission event
-
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-    });
-
-    // helper function for sending an AJAX request
-
-    function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-    }
-
-  </script> -->
 </body>
+
 </html>

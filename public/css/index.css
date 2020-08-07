@@ -2,7 +2,6 @@
 /* HERO Section */
 /****************/
 .hero {
-  /* to fix h2 and p in this section to the upper-right of this section */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,6 +62,8 @@
 /* Main - Vacation Packages */
 /****************************/
 
+/* also reference index-images.js for innerHTML */
+
 .index-main {
   max-width: 1200px;
   margin: 0 auto;
@@ -81,10 +82,8 @@
 }
 
 .vacationPackages figure {
-  /* background-color: lightskyblue; */
   margin: 0;
   width: 300px;
-  /* height: 400px; */
 }
 
 .vacationPackages img {
@@ -97,7 +96,6 @@
 .vacationPackages figcaption {
   color: black;
   text-align: center;
-  /* background-color: dodgerblue; */
 }
 
 /* Responsive sizingfor phone screen size */

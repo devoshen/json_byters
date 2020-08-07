@@ -1,5 +1,5 @@
 /* Resets */
-/* https://necolas.github.io/normalize.css */
+/* https://necolas.github.io/normalize.css useful info on resets */
 
 /* '*' applies to all */
 * {
@@ -11,16 +11,11 @@ body {
 }
 
 /* removes defualt bullet-points in lists */
-nav ul {
+ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* removes defualt underline in lists */
-nav a{
+/* removes defualt underline in <a> links */
+a {
   text-decoration: none;
-}
-
-form ul {
-  list-style-type: none;
-  padding-left: 0;
 }
