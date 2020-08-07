@@ -40,61 +40,55 @@
     
 
 ###### Jaroslaw Czerwinski
-- Frontend dev: Working on design, and features of login, register, contact, and custom 404 pages. Major scope of my work was to create professionally looking pages that would have same layout, colors, backgrounds, sizes, to achieve required effect. I implemented some basic HTML form validation for customer input, the more robust validation of customer input is done on back end in our project through Mongoose Passport.  Most of front-end project was done by implementing HTML, CSS, and JavaScript. As a team we followed convention told in class for creating and separating code into specific groups like CSS files, HTML files, partials, views, public etc. We employed Git and GitHub for our collaboration and merging results of our individual work. 
+  - Frontend dev: Working on design, and features of login, register, contact, and custom 404 pages. Major scope of my work was to create professionally looking pages that would have same layout, colors, backgrounds, sizes, to achieve required effect. I implemented some basic HTML form validation for customer input, the more robust validation of customer input is done on back end in our project through Mongoose Passport.  Most of front-end project was done by implementing HTML, CSS, and JavaScript. As a team we followed convention told in class for creating and separating code into specific groups like CSS files, HTML files, partials, views, public etc. We employed Git and GitHub for our collaboration and merging results of our individual work. 
 ###### Stevyn Shen
-- Frontend dev: Veiws, partials, and css styling of the following index, packages, order, header, footer. 
-- Devops: Version control with GitHub. Guiding team members to work on local branch and merge to master.
+  - Frontend dev: Veiws, partials, and css styling of the following index, packages, order, header, footer. 
+  - Devops: Version control with GitHub. Guiding team members to work on local branch and merge to master.
 
-### Frontend Tasks:
+### Frontend Tasks & Notes:
 - Create frontend pages: home, contact, login, register, packages, order, 404,
 - Implemented same design across all pages to ensure consistend look and functionality. 
 - Responsiveness: website friendly for mobile and desktop screen size (hamburger menu available in mobile view)
 - Responsiveness: ensure form containers adjusted to different screen size (media query)
-
-### Frontend Notes:
 - Some problems with styling we encounter during the process of this project we resolved by implemeting specific standards for all pages. Our standards included colors, fornts, backrounds and overall visual consistency of all pages accross the board. 
 Problem solving we did through group discussions and implementing brain storming. 
 
 - Future improvements:
-    - Google Maps integration to Contact page
-    - Confirmation/ThankYou page once user message successfully submitted 
-    - Form validation with JS (clear and concise messages to help user to fill Forms as our database desires)
-    - Current page indication / highlighting 
-    - Future improvements to our website could include some animation to make already attractive pages alive. 
-    - We would implemet social media conections as well. 
-    
-### Backend Tasks:
+  - Google Maps integration to Contact page
+  - Confirmation/ThankYou page once user message successfully submitted 
+  - Form validation with JS (clear and concise messages to help user to fill Forms as our database desires)
+  - Current page indication / highlighting 
+  - Future improvements to our website could include some animation to make already attractive pages alive. 
+  - We would implemet social media conections as well. 
+  
+### Backend Tasks & Notes:
+  
+1. Paths & Endpoint handlers are defined
+2. Make the website dynamic:
+  - Populate package section in index page from Database & display only the non-expired packages. For now, we have 9 pictures in database and 1is expired. We have filtered this one expired package and displayed the rest in index page
+  - Individual package page - all info's displayed in the pages are populated from database. Date validation is done & alerts are provided forpackages that have start dates past current dates
+  - Contact Us page - Agency & Agent info's included are populated from database
 
- 1. Authentification Setup:
+3. Registration Page:
+  - On the click of register button, data's keyed in by users are saved in Customer Table. System remembers them when they return next time.
+
+4. Authentification Setup:
   - install passport, passport-local, passport-local-Mongoose, Local Strategy in app.js. Set up modification for the passport to work
   - in Routes/auth.js : set up LOGIN and LOGOUT routes to validate the user information against DB records.The function : isLoggedIn will check if user is registered and prevent him/her to  access certain pages ( in our case: order.js)
   - In CUSTOMER model there is plugin installed to check the validation of the user using passport-mongoose.
 
- 2. Mongoose-sequence: 
- - Installed mongoose- sequence to auto-populate an ID for Customer, Booking and BookingDetail models ( plugin installed)
+5. Mongoose-sequence: 
+  - Installed mongoose- sequence to auto-populate an ID for Customer, Booking and BookingDetail models ( plugin installed)
 
- 3. Models connection:
+6. Models connection:
   - ROUTES/ADDORDER.JS is  the page to perform the assigning the booking ID with bookingDetails to the currentuser. We were able to export the data from this page directly to the THANKYOU.ejs file. 
   -CUSTOMER and BOOKING models both have sub-model included to be able to use it in ADDORDER.js file
-  
-- Paths & Endpoint handlers are defined
 
-- Make the website dynamic:
-  - Populate package section in index page from Database & display only the non-expired packages. For now, we have 9 pictures in database and 1 is expired. We have filtered this one expired package and displayed the rest in index page
-  - Individual package page - all info's displayed in the pages are populated from database. Date validation is done & alerts are provided for packages that have start dates past current dates
-  - Contact Us page - Agency & Agent info's included are populated from database
-
-- Registration Page:
-  - On the click of register button, data's keyed in by users are saved in Customer Table. System remembers them when they return next time.
-
-- Booking Process --- code's included in /routes/addorder.js : 
+7. Booking Process --- code's included in /routes/addorder.js : 
   - Book Now button in Package page takes user to a booking confirmation page. This page will have a summary of the package details auto-generated from db. Users can choose to confirm booking.
   - A post action from booking page will create a booking record and a booking details records which are linked 
   - Users will be directed to a thank you page with all Info's included about chosen package, booking Id etc
-
-### Backend Notes:
-- Problems encoutered and problem solving methodology
-- Future improvements
+  
 
 ## General Notes:
 - Device test: desktop, iphone 
