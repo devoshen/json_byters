@@ -15,7 +15,7 @@ main h2 {
                -1px -1px 0 #000;
 
 }
-
+/* styling form */
 main form {
   background-color: aliceblue;
   padding: 0.5rem 1rem;
@@ -28,11 +28,6 @@ main form {
   max-width: 400px;
 }
 
-main form fieldset{
-  /* width: 100%; */
-
-}
-
 main form ul { 
   display: flex;
   flex-direction: column;
@@ -41,10 +36,6 @@ main form ul {
 
 main form ul li { 
   display: flex;
-
-
-  /* justify-content: space-between; */
-  /* justify-content: center; */
 
 }
 
@@ -59,6 +50,7 @@ main form ul li input{
   overflow: auto;
   align-self: baseline; 
 }
+/* styling button */
 
 main form ul button{ 
   font-size: 20px;

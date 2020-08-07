@@ -43,6 +43,10 @@ Implementing same design across all pages to ensure professional look and functi
 ### Frontend Notes:
 - Problems encoutered and problem solving methodology
 - Future improvements
+-Some problems with styling we encounter during the process of this project we resolved by implemeting specific standards for all pages. Our standards included colors, fornts, backrounds and overall visual consistency of all pages accross the board. 
+Problem solving we did through group discussions and implementing brain storming. 
+-Future improvements to our website could include some animation to make already attractive pages alive. 
+We would implemet social media conections as well. 
 
 ### Backend Tasks:
 - Paths & Endpoint handlers are defined

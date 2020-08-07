@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
   <%- include('./partials/css-global'); %>
   <link rel="stylesheet" href="../css/registration.css">
-  </head>
-  	<!-- Header & Navbar-->
-    <%- include('./partials/header'); %>
+</head>
+<!-- Header & Navbar-->
+<%- include('./partials/header'); %>
+
+<!--setting required fields   -->
 
 <body>
   <div class="wrapper">
     <main>
       <h2>Welcome to Travel Experts</h2>
-      <form action="/register" method ="post">
+      <form action="/register" method="post">
         <fieldset>
           <legend>Fill this form to register</legend>
           <ul>
@@ -60,7 +63,7 @@
             </li>
             <li>
               <label>Email Address<sup>*</sup></label>
-              <input type="email" name="email" required minlength="6" >
+              <input type="email" name="email" required minlength="6">
             </li>
             <li>
               <label>Password<sup>*</sup></label>
@@ -68,9 +71,7 @@
               title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
             </li>
             <li>
-              <!-- <lable for="name">Re-enter Password</lable>
-              <input type="text" name="" id="name"><br><br> -->
-              <!-- pattern=".+@company\.com" -->
+              <!-- setiting up submit button -->
             </li>
             <button type="submit">Register</button>
           </ul>
@@ -78,10 +79,9 @@
       </form>
     </main>
     <%- include('./partials/footer'); %>
-  </div> 
+  </div>
 
   <%- include('./partials/js-menu-toggle'); %>
-</body> 
+</body>
+
 </html>
-
-
