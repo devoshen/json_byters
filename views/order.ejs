@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookings</title>
-  
+
   <link rel="stylesheet" href="../css/order.css">
   <%- include('./partials/css-global'); %>
- 
+
 </head>
+
 <body>
-	<div class="wrapper">
-		<%- include('./partials/header'); %>
-		<main>
+  <div class="wrapper">
+    <%- include('./partials/header'); %>
+    <main>
       <h1>Bookings</h1>
-      <form  action="/order/<%= orderdata.pck_id %>" method="post">
+      <form action="/order/<%= orderdata.pck_id %>" method="post">
         <fieldset>
           <legend>Book Your Travel Package</legend>
           <ul>
             <li>
-              <label id="startdate-label">Start Date</label>  
-              <input type ="text" name = "tripStart" value="<%= orderdata.startdate %>" id="startdate-input" >
+              <label id="startdate-label">Start Date</label>
+              <input type="text" name="tripStart" value="<%= orderdata.startdate %>" id="startdate-input">
             </li>
             <li>
               <label>End Date</label>
-              <input type ="text" name = "tripEnd" value="<%= orderdata.enddate %>" id="enddate-input">
-            </li>      
+              <input type="text" name="tripEnd" value="<%= orderdata.enddate %>" id="enddate-input">
+            </li>
             <li>
               <label>Chosen Package</label>
-              <input type ="text" name = "destination" value="<%= orderdata.pck_name %>" class="destination-js">
+              <input type="text" name="destination" value="<%= orderdata.pck_name %>" class="destination-js">
             </li>
             <li>
               <label>Username</label>
-              <input type ="text" name = "Username" value="<%= currentUser.username %>">
+              <input type="text" name="Username" value="<%= currentUser.username %>">
             </li>
             <button>Confirm Booking!</button>
           </ul>
-        </fieldset> 
+        </fieldset>
       </form>
     </main>
     <%- include('./partials/footer'); %>
-	</div>
+  </div>
   <%- include('./partials/js-menu-toggle'); %>
 </body>
+
 </html>

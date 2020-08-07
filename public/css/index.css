@@ -100,6 +100,9 @@
   /* background-color: dodgerblue; */
 }
 
+.active {
+  color: #cd853f;
+}
 /* Responsive sizingfor phone screen size */
 @media screen and (max-width: 600px) {
   .hero h2 {
