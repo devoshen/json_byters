@@ -70,39 +70,47 @@ router.post("/order/:id", function (req, res) {
     Booking.create(newBooking, function (err, createBooking) {
       User.findOne({ username: username }, function (err, foundUser) {
         if (err) {
-            console.log(err);
+          console.log(err);
         } else {
-            foundUser.bookings.push(createBooking);
-            foundUser.save(function (err, data) {
-              if (err) {
-                console.log(err)
-              } else {
-                  // console.log(username)
-                 
-                  Booking.findOne({BookingId: createBooking.BookingId}, function (err, foundBooking) {
+          foundUser.bookings.push(createBooking);
+          foundUser.save(function (err, data) {
+            if (err) {
+              console.log(err)
+            } else {
+              // console.log(username)
+
+              Booking.findOne({ BookingId: createBooking.BookingId }, function (err, foundBooking) {
+                if (err) {
+                  console.log(err);
+                } else {
+                  // console.log(foundBooking)
+                  foundBooking.bookingdetail.push(newlyCreated);
+                  foundBooking.save(function (err, data) {
                     if (err) {
-                      console.log(err);
+                      console.log(err)
                     } else {
-                      // console.log(foundBooking)
-                      foundBooking.bookingdetail.push(newlyCreated);
-                      foundBooking.save(function (err, data) {
+                      BookingDetail.findOne({ Username: username }, function (err, foundDetails) {
                         if (err) {
                           console.log(err)
                         } else {
-                          BookingDetail.findOne({Username: username }, function (err, foundDetails) {
-                            if (err) {
-                              console.log(err)
-                            } else {
-                              console.log(foundDetails)
-                                data = { booking: data, details: foundDetails }
-                                res.render("thankyou",{data : data})
-                                // console.log(foundBooking)
-                                  }
-                            })
+                          console.log(foundDetails)
+                          
+                          let startdate = new Date(foundDetails.TripStart);
+                          let formatted_pack_strtdate = startdate.getFullYear() + "/" + (startdate.getMonth() + 1) + "/" + startdate.getDate();
+
+                          let enddate = new Date(foundDetails.TripEnd);
+                          let formatted_pack_enddate = enddate.getFullYear() + "/" + (enddate.getMonth() + 1) + "/" + enddate.getDate();
+
+                          data = { booking: data, details: foundDetails, enddate: formatted_pack_enddate, startdate: formatted_pack_strtdate}
+                          
+                          res.render("thankyou", { data: data })
+                          // console.log(foundBooking)
                         }
-                      
-                   })
-                  } 
+                      })
+                    }
+
+                  })
+                }
               })
             }
           })
