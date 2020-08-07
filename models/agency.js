@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Define our Schema
+// Define Agency Schema
 
 const agencySchema = new mongoose.Schema(
   {
