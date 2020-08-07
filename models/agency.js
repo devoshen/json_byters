@@ -4,14 +4,14 @@ const mongoose = require('mongoose');
 
 const agencySchema = new mongoose.Schema(
   {
-    AgencyId:     Number,
+    AgencyId: Number,
     AgncyAddress: String,
-    AgncyCity:    String,
-    AgncyProv:    String,
-    AgncyPostal:  String,
+    AgncyCity: String,
+    AgncyProv: String,
+    AgncyPostal: String,
     AgncyCountry: String,
-    AgncyPhone:   String,
-    AgncyFax:     String
+    AgncyPhone: String,
+    AgncyFax: String
   }
 );
 

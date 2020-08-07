@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
   <%- include('./partials/css-global'); %>
   <link rel="stylesheet" href="../css/registration.css">
-  </head>
-  	<!-- Header & Navbar-->
-    <%- include('./partials/header'); %>
+</head>
+<!-- Header & Navbar-->
+<%- include('./partials/header'); %>
 
 <body>
   <div class="wrapper">
     <main>
       <h2>Welcome to Travel Experts</h2>
-      <form action="/register" method ="post">
+      <form action="/register" method="post">
         <fieldset>
           <legend>Fill this form to register</legend>
           <ul>
             <li>
               <label>First Name<sup>*</sup></label>
-              <input type ="text" name = "firstName" required minlength="3">
+              <input type="text" name="firstName" required minlength="3">
             </li>
             <li>
               <label>Last Name<sup>*</sup></label>
-              <input type ="text" name = "lastName" required minlength="3">
+              <input type="text" name="lastName" required minlength="3">
             </li>
             <li>
               <label>Address<sup>*</sup></label>
-              <input type ="text" name = "address" required minlength="3"> 
+              <input type="text" name="address" required minlength="3">
             </li>
             <li>
               <label>City<sup>*</sup></label>
-              <input type ="text" name = "city" required minlength="3">
+              <input type="text" name="city" required minlength="3">
             </li>
             <li>
               <label>Province<sup>*</sup></label>
-              <input type ="text" name = "prov" id ="prov" required minlength="3">
+              <input type="text" name="prov" id="prov" required minlength="3">
             </li>
             <li>
               <label>Postal Code<sup>*</sup></label>
-              <input type ="text" name = "postal" required minlength="3">
+              <input type="text" name="postal" required minlength="3">
             </li>
             <li>
               <label>Country<sup>*</sup></label>
-              <input type ="text" name = "country" required minlength="3">
+              <input type="text" name="country" required minlength="3">
             </li>
             <li>
               <label>Home Tel. Number<sup>*</sup></label>
-              <input type ="text" name = "homePhone" required minlength="6">
+              <input type="text" name="homePhone" required minlength="6">
             </li>
             <li>
               <label>Busines Tel. Number<sup>*</sup></label>
-              <input type ="text" name = "busPhone" required minlength="6">
+              <input type="text" name="busPhone" required minlength="6">
             </li>
             <li>
               <label>Username<sup>*</sup></label>
-              <input type ="text" name = "username" required minlength="6">
+              <input type="text" name="username" required minlength="6">
             </li>
             <li>
               <label>Email Address<sup>*</sup></label>
-              <input type="email" name="email" required minlength="6" >
+              <input type="email" name="email" required minlength="6">
             </li>
             <li>
               <label>Password<sup>*</sup></label>
               <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required>
             </li>
             <li>
               <!-- <lable for="name">Re-enter Password</lable>
@@ -78,10 +80,9 @@
       </form>
     </main>
     <%- include('./partials/footer'); %>
-  </div> 
+  </div>
 
   <%- include('./partials/js-menu-toggle'); %>
-</body> 
+</body>
+
 </html>
-
-

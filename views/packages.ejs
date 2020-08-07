@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Experts Vacation Packages</title>
-  
+
   <link rel="stylesheet" href="../css/packages.css">
   <%- include('./partials/css-global'); %>
 
 </head>
+
 <body>
-	<div class="wrapper">
-		<%- include('./partials/header'); %>
-		
-		<main>
+  <div class="wrapper">
+    <%- include('./partials/header'); %>
+
+    <main>
       <figure>
         <h2><%= PkgName %></h2>
         <img src="<%= path %>">
@@ -33,11 +35,12 @@
         <a href="/order/<%= PackageId %>">BOOK NOW</a>
       </figure>
     </main>
-    
+
     <%- include('./partials/footer'); %>
-	</div>
- 
+  </div>
+
   <%- include('./partials/js-menu-toggle'); %>
   <script src="/js/singlepackage.js"></script>
 </body>
+
 </html>

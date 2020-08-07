@@ -25,14 +25,14 @@
               <lable for="name">First Name</lable>
               <input type="text" name="firstname" id="firstname" required>
             </li>
-            <li>  
+            <li>
               <lable for="name">Last Name</lable>
               <input type="text" name="lastname" id="lastname" required>
             </li>
-            <li>  
+            <li>
               <lable for="email">Return Email</lable>
               <input type="email" name="email" id="email" required>
-            </li>   
+            </li>
             <li>
               <label for="msg">Message</label>
               <textarea name="message" id="msg" maxlength="180" rows="7" required></textarea>
@@ -40,7 +40,7 @@
             <button type="submit">Submit Message</button>
             <p id="form1-status"></p>
           </ul>
-        </fieldset>      
+        </fieldset>
       </form>
 
       <form class="form2">
@@ -48,32 +48,33 @@
           <legend>Contact Travel Experts</legend>
           <!-- <%= contact_data.agencies_data %> -->
           <% contact_data.agencies_data.forEach(function(agency){ %>
-            <h3><%= agency.AgncyCity %> &nbsp;Office</h3>
-            <div>
-              <p class="form2-label">Address:</p>
-              <p><%= agency.AgncyAddress %> &nbsp;<%= agency.AgncyCity %>, &nbsp;<%= agency.AgncyProv %>, &nbsp;<%= agency.AgncyCountry %> &nbsp;<%= agency.AgncyPostal %></p>
-            </div>                
-            <div>
-              <p class="form2-label">Telephone:</p>
-              <p><%= agency.AgncyPhone %></p>
-            </div>
-            <div>  
-              <p class="form2-label">Fax:</p>
-              <p><%= agency.AgncyFax %></p>
-            </div>
-              
-            <% contact_data.agent_data.forEach(function(agent) { %>
-              <% if (agent.AgencyId == agency.AgencyId) { %>
-                <div>
-                  <p class="form2-label"><%= agent.AgtFirstName %> &nbsp;<%= agent.AgtLastName %></p>
-                  <p>Cell: &nbsp;<%= agent.AgtBusPhone %></p>
-                </div>
-              <% } %> 
-            <% }); %>
+          <h3><%= agency.AgncyCity %> &nbsp;Office</h3>
+          <div>
+            <p class="form2-label">Address:</p>
+            <p><%= agency.AgncyAddress %> &nbsp;<%= agency.AgncyCity %>, &nbsp;<%= agency.AgncyProv %>,
+              &nbsp;<%= agency.AgncyCountry %> &nbsp;<%= agency.AgncyPostal %></p>
+          </div>
+          <div>
+            <p class="form2-label">Telephone:</p>
+            <p><%= agency.AgncyPhone %></p>
+          </div>
+          <div>
+            <p class="form2-label">Fax:</p>
+            <p><%= agency.AgncyFax %></p>
+          </div>
+
+          <% contact_data.agent_data.forEach(function(agent) { %>
+          <% if (agent.AgencyId == agency.AgencyId) { %>
+          <div>
+            <p class="form2-label"><%= agent.AgtFirstName %> &nbsp;<%= agent.AgtLastName %></p>
+            <p>Cell: &nbsp;<%= agent.AgtBusPhone %></p>
+          </div>
+          <% } %>
           <% }); %>
-        </fieldset>      
+          <% }); %>
+        </fieldset>
       </form>
-      
+
     </main>
 
     <!-- footer -->
@@ -130,4 +131,5 @@
 
   </script> -->
 </body>
+
 </html>

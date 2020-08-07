@@ -29,6 +29,8 @@ router.get("/order/:id", isLoggedIn, function (req, res) {
 })
 
 // //********************************* */ BOOKING MODEL ************************
+
+//  CREATE a new booking to add to database
 router.post("/order/:id", function (req, res) {
 
   const bookingDetailId = req.body.bookingDetailId;
@@ -65,7 +67,7 @@ router.post("/order/:id", function (req, res) {
     Username: username,
     PackageId: req.params.id,
   }
-
+//  The request to create bookingID and bookign details based on username
   BookingDetail.create(newBookingDetail, function (err, newlyCreated) {
     Booking.create(newBooking, function (err, createBooking) {
       User.findOne({ username: username }, function (err, foundUser) {
@@ -104,7 +106,7 @@ router.post("/order/:id", function (req, res) {
                           data = { booking: data, details: foundDetails, enddate: formatted_pack_enddate, startdate: formatted_pack_strtdate}
                           
                           res.render("thankyou", { data: data })
-                          // console.log(foundBooking)
+                         
                         }
                       })
                     }
@@ -120,12 +122,7 @@ router.post("/order/:id", function (req, res) {
   })
 })
 
-
-// router.get("/travelpackages/:id/order", function(req,res){
-//   res.render ("order.ejs")
-// })
-// FUNCTION IS LOGGED IN
-
+// Function to check if the user is validated
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
     return next()
