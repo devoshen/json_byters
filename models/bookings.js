@@ -26,7 +26,7 @@ const bookingSchema = new mongoose.Schema(
 
 // Compile and export our model using the above Schema.
 // See: https://mongoosejs.com/docs/models.html 
-bookingSchema.plugin(AutoIncrement, {inc_field: 'BookingId', start_seq: 1300 })
+bookingSchema.plugin(AutoIncrement, {inc_field: 'BookingId', start_seq: 1400 })
 module.exports = mongoose.model('Booking', bookingSchema );
 
 // Important: The first argument of mongoose.model() is the singular name of the collection your model is for. 

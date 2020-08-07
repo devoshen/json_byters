@@ -14,7 +14,7 @@
 		<%- include('./partials/header'); %>
 		<main>
       <h1>Bookings</h1>
-      <form  action="/order" method="post">
+      <form  action="/order/<%= orderdata.pck_id %>" method="post">
         <fieldset>
           <legend>Book Your Travel Package</legend>
           <ul>
