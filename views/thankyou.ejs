@@ -22,51 +22,50 @@
             <ul>
               <li>
                 <label>Booking Id</label>
-                <input type ="text" name = "tripEnd" value="<%= data.booking.BookingId %>"  id="enddate-input">
+                <input type ="text" name = "bid" value="<%= data.booking.BookingId %>">
               </li> 
               <li>
-                <label id="startdate-label">Customer Name</label>  
-                <input type ="text" name = "tripStart" value="<%= currentUser.CustFirstName %>  <%= currentUser.CustLastName %> " id="startdate-input" >
+                <label>Customer Name</label>  
+                <input type ="text" name = "name" value="<%= currentUser.CustFirstName %>  <%= currentUser.CustLastName %> ">
               </li>
               <li>
                 <label>Address</label>
-                <input type ="text" name = "tripEnd" value="<%= currentUser.CustAddress %> <%= currentUser.CustCity %> <%= currentUser.CustProv %> <%= currentUser.CustCountry %>"  id="enddate-input">
+                <input type ="text" name = "address" value="<%= currentUser.CustAddress %> <%= currentUser.CustCity %> <%= currentUser.CustProv %> <%= currentUser.CustCountry %>">
               </li> 
               <li>
                 <label>Postal</label>
-                <input type ="text" name = "tripEnd" value="<%= currentUser.CustPostal %> <%= currentUser.CustCountry %>"  id="enddate-input">
+                <input type ="text" name = "post" value="<%= currentUser.CustPostal %> <%= currentUser.CustCountry %>">
               </li>  
               <li>
                 <label>Country</label>
-                <input type ="text" name = "tripEnd" value="<%= currentUser.CustCountry %>"  id="enddate-input">
+                <input type ="text" name = "country" value="<%= currentUser.CustCountry %>">
               </li>    
               <li>
                 <label>Phone number</label>
-                <input type ="text" name = "tripEnd" value="<%= currentUser.CustHomePhone %>"  id="enddate-input">
+                <input type ="text" name = "phno" value="<%= currentUser.CustHomePhone %>">
               </li>  
               <li>
                 <label>Destination</label>
-                <input type ="text" name = "tripEnd" value="<%= data.details.Destination %>"  id="enddate-input">
+                <input type ="text" name = "dest" value="<%= data.details.Destination %>">
               </li> 
               <li>
                 <label>Trip Start Date</label>
-                <input type ="text" name = "tripEnd" value="<%= data.details.TripStart %>"  id="enddate-input">
+                <input type ="text" name = "tripstart" value="<%= data.startdate %>">
               </li> 
               <li>
                 <label>Trip End Date</label>
-                <input type ="text" name = "tripEnd" value="<%= data.details.TripEnd %>"  id="enddate-input">
+                <input type ="text" name = "tripEnd" value="<%= data.enddate %>">
               </li>
             
               <li>
                 <label>Email account</label>
-                <input type ="text" name = "Username" value="<%= currentUser.CustEmail %>">
+                <input type ="text" name = "email" value="<%= currentUser.CustEmail %>">
               </li>
               <button>Take me home!</button> 
             </ul>
           </fieldset> 
       </form>
-    </div>
-     
+    </div>     
 </main>
   
  
