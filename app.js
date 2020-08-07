@@ -1,8 +1,6 @@
 // import modules
 const path = require('path');
 const express = require('express');
-// const moment = require('moment');
-// const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const bodyParser =require ('body-parser')
@@ -25,7 +23,7 @@ const { forEach } = require('async');
 const authRoutes     = require("./routes/auth")
 const addorderRoutes    = require("./routes/addorder");
 
-
+// finding current date
 const now_date = new Date();
 
 // Hide creds from repo
@@ -135,6 +133,7 @@ app.get('/travelpackages/:id', function (request, response) {
     response.render('packages', package);
   });
 })
+
 
 app.get('/order/:id', function (request, response) {
   Package.findOne({ 'PackageId': request.params.id }, function (error, package) {
