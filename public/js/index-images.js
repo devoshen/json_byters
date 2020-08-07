@@ -1,4 +1,3 @@
-// gallery section in index page //
 // function to render a JSON list when fetched//
 
 // fetch('http://localhost:3000/api/packages')

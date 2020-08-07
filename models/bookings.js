@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const AutoIncrement = require('mongoose-sequence')(mongoose);
 
-// Step 1: Define our Schema
+// Step 1: Define booking Schema
 // See: https://mongoosejs.com/docs/guide.html
 /*
 "Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection."

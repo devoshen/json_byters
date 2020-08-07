@@ -1,3 +1,5 @@
+// this file is used to add additional packages to database 
+
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 
