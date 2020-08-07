@@ -4,38 +4,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Experts Home</title>
+  <title>Thank you</title>
+  <link rel="stylesheet" href="../css/order.css">
   <%- include('./partials/css-global'); %>
 </head>
 
 <body>
   <%- include('./partials/header'); %>
-      <main>
-     <%= currentUser.CustFirstName %>
-     <%= data %>
+  <main>
+    <h1> Booking confirmation</h1>
+
+    <h4> Thank you for booking with us!</h4>
+      <div class="wrapper">  
+        <form action="/">
+         <fieldset>
+          <legend class="legend">Summary</legend>
+            <ul>
+              <li>
+                <label>Booking Id</label>
+                <input type ="text" name = "tripEnd" value="<%= data.booking.BookingId %>"  id="enddate-input">
+              </li> 
+              <li>
+                <label id="startdate-label">Customer Name</label>  
+                <input type ="text" name = "tripStart" value="<%= currentUser.CustFirstName %>  <%= currentUser.CustLastName %> " id="startdate-input" >
+              </li>
+              <li>
+                <label>Address</label>
+                <input type ="text" name = "tripEnd" value="<%= currentUser.CustAddress %> <%= currentUser.CustCity %> <%= currentUser.CustProv %> <%= currentUser.CustCountry %>"  id="enddate-input">
+              </li> 
+              <li>
+                <label>Postal</label>
+                <input type ="text" name = "tripEnd" value="<%= currentUser.CustPostal %> <%= currentUser.CustCountry %>"  id="enddate-input">
+              </li>  
+              <li>
+                <label>Country</label>
+                <input type ="text" name = "tripEnd" value="<%= currentUser.CustCountry %>"  id="enddate-input">
+              </li>    
+              <li>
+                <label>Phone number</label>
+                <input type ="text" name = "tripEnd" value="<%= currentUser.CustHomePhone %>"  id="enddate-input">
+              </li>  
+              <li>
+                <label>Destination</label>
+                <input type ="text" name = "tripEnd" value="<%= data.details.Destination %>"  id="enddate-input">
+              </li> 
+              <li>
+                <label>Trip Start Date</label>
+                <input type ="text" name = "tripEnd" value="<%= data.details.TripStart %>"  id="enddate-input">
+              </li> 
+              <li>
+                <label>Trip End Date</label>
+                <input type ="text" name = "tripEnd" value="<%= data.details.TripEnd %>"  id="enddate-input">
+              </li>
+            
+              <li>
+                <label>Email account</label>
+                <input type ="text" name = "Username" value="<%= currentUser.CustEmail %>">
+              </li>
+              <button>Take me home!</button> 
+            </ul>
+          </fieldset> 
+      </form>
+    </div>
      
-    </main>
+</main>
   
-  </div>
-  <!-- <%- include('./partials/footer'); %> -->
+ 
+  <%- include('./partials/footer'); %>
   <%- include('./partials/js-menu-toggle'); %>
 
   <!-- javascript link -->
-  <script src="/js/index-images.js"></script>
+
 </body>
 
 </html>
-<!-- BookingDate: Date,
-    BookingNo: String,
-    TravelerCount: Number, 
-    CustomerId: Number,
-    TripTypeId: String,
-    PackageId: String,
-    Username: String,
-    bookingdetail: [ 
-      {
-      type: mongoose.Schema.Types.ObjectId,
-      ref:"BookingDetail"
-      }
-    ] -->
-

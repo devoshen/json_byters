@@ -14,6 +14,16 @@ main h1 {
 				        1px -1px 0 #000,
                -1px -1px 0 #000;
 }
+main h4 {
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  color: #cd853f;
+  text-align: center;
+  text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				        1px -1px 0 #000,
+               -1px -1px 0 #000;
+}
 
 main form {
   background-color: aliceblue;
@@ -23,6 +33,11 @@ main form {
   max-width: 400px;
   width: 80%;
   margin: 0 auto;
+}
+
+.legend {
+  color:#cd853f;
+  font-size: 1.2rem;
 }
 
 main form fieldset{
